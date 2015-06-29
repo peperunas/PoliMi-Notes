@@ -1,0 +1,713 @@
+%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\RequirePackage{fix-cm}
+\documentclass[twoside,twocolumn,italian]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{luainputenc}
+\usepackage[landscape]{geometry}
+\geometry{verbose,tmargin=1cm,bmargin=1.5cm,lmargin=1cm,rmargin=1cm}
+\usepackage{array}
+\usepackage{multirow}
+\usepackage{amsthm}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{fixltx2e}
+\usepackage{graphicx}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Textclass specific LaTeX commands.
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% User specified LaTeX commands.
+\renewcommand{\arraystretch}{2}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{Formulario Fisica Tecnica - Giulio De Pasquale}
+
+\maketitle
+
+\section{Termodinamica}
+
+
+\subsection{Unità di Misura}
+\begin{description}
+\item [{Energia~Interna}] $U=[J]$, $\bar{u}=[\frac{J}{Kg}]$;
+\item [{Calore}] $Q=[J]$, $\bar{q}=[\frac{J}{Kg}]$;
+\item [{Potenza~Termica}] $\dot{Q}=[\frac{J}{s}]=[W]$;
+\item [{Lavoro}] $L=[J]$, $\bar{l}=[\frac{J}{Kg}]$;
+\item [{Potenza~Meccanica}] $\dot{L}=[\frac{J}{s}]=[W]$;
+\item [{Entalpia}] $H=[J]$, $\bar{h}=[\frac{J}{Kg}]$;
+\item [{Entropia}] $S=[\frac{J}{\text{°K}}]$, $\bar{s}=[\frac{J}{Kg\cdot\text{°K}}]$;
+\item [{Temperatura}] $T=[\text{°}K]$;
+\item [{Pressione}] $P=[Pa]$;
+\item [{Volume}] $V=[m^{3}]$, $\bar{v}=[\frac{m^{3}}{Kg}]$;
+\item [{Massa}] $m=[Kg]$;
+\item [{Densità}] $\rho=[\frac{Kg}{m^{3}}]$;
+\item [{Velocità}] $w=[\frac{m}{s}]$;
+\item [{Costante~Universale~dei~Gas}] $R=[\frac{J}{\text{°K}\cdot kmol}]$,
+$R^{*}=\frac{R}{M}=[\frac{J}{Kg\cdot\text{°K}}]$;
+\item [{Calore~Specifico}] $c=[\frac{J}{Kg\cdot\text{°K}}]$;
+\item [{Massa~Molare}] $M=[\frac{Kg}{kmol}]$;
+\item [{Portata~Massica}] $\dot{m}=[\frac{Kg}{s}]$;
+\item [{Portata~Volumetrica}] $\dot{V}=\dot{m}\bar{v}=[\frac{m^{3}}{s}]$;
+\end{description}
+
+\subsection{Conversioni}
+
+
+\subsubsection{Pressione}
+\begin{itemize}
+\item $1\,ata=98066,5\,Pa;$
+\item $1\,bar=10^{5}\,Pa;$
+\item $1\,atm=101325\,Pa;$
+\end{itemize}
+
+\subsubsection{Calore}
+\begin{itemize}
+\item $1\,cal=4,184\,J;$
+\end{itemize}
+
+\subsection{Pesi Molari}
+\begin{itemize}
+\item $H=1$;
+\item $He=4$;
+\item $C=12$;
+\item $N=14$;
+\item $O=16$;
+\end{itemize}
+
+\subsection{Generale e Proprietà Gas}
+
+Da tenere sempre presente che
+\[
+P\bar{v}=R^{*}T
+\]
+riscrivibile come
+
+\[
+PV=nRT
+\]
+
+
+Inoltre, il $I$ principio della termodinamica impone che
+
+\[
+\Delta U=\overleftarrow{Q}-\overrightarrow{L}
+\]
+
+
+\begin{tabular}{|c|c|c|}
+\hline 
+Tipologia Gas & $c_{v}$ & $c_{p}$\tabularnewline
+\hline 
+\hline 
+Monoatomico & $\frac{3}{2}R^{*}$ & $\frac{5}{2}R^{*}$\tabularnewline
+\hline 
+Biatomico / Politatomico Lineare & $\frac{5}{2}R^{*}$ & $\frac{7}{2}R^{*}$\tabularnewline
+\hline 
+Poliatomico Non Lineare & $\frac{6}{2}R^{*}$ & $\frac{8}{2}R^{*}$\tabularnewline
+\hline 
+\end{tabular}
+\begin{itemize}
+\item $R=8314,4\frac{J}{\text{°K}\cdot kmol}$;
+\item $n=\frac{m}{M}$ dove $n$ = numero di moli;
+\item $c_{p}-c_{v}=R^{*}$, la relazione di Mayer;
+\item $\dot{V}=\dot{m}\bar{v}$ con $\dot{V}=$ portata volumetrica;
+\end{itemize}
+
+\subsection{Calore, Energia Interna, Entalpia ed Entropia}
+
+
+\subsubsection{Calore}
+\begin{itemize}
+\item $Q=mc_{x}\varDelta T$ con $c_{x}=cost$;
+\item $Q=mc_{v}\varDelta T$ con $V=cost$;
+\item $Q=mc_{p}\varDelta T$ con $P=cost$;
+\item $Q=T\Delta S$ con $T=cost$;
+\item $\dot{Q}=\dot{m}c_{materiale}\Delta T$;
+\end{itemize}
+
+\subsubsection{Energia Interna}
+\begin{itemize}
+\item $d\bar{u}=c_{v}dT$, se gas perfetto;
+\item $d\bar{u}=Tds-Pd\bar{v}$;
+\end{itemize}
+
+\subsubsection{Entalpia}
+\begin{itemize}
+\item $H=U+PV$;
+\item $d\bar{h}=c_{p}dT$, se gas perfetto;
+\item $d\bar{h}=Tds+\bar{v}dP$;
+\item $d\bar{h}=\delta q+\bar{v}dP$;
+\item $\Delta h=l=v\Delta P$;\footnote{Vale per i liquidi.};
+\end{itemize}
+
+\subsubsection{Entropia}
+\begin{itemize}
+\item $ds=\frac{\delta q}{T}$, nel caso di un processo reversibile;
+\item $\varDelta S=\varDelta S_{\overleftarrow{Q}}+\varDelta S_{irr}$;
+\item $ds=\frac{dU}{T}$, valido nei liquidi; 
+\item $ds=c_{v}\frac{dT}{T}+R^{*}\frac{d\bar{v}}{\bar{v}}$;
+\item $ds=c_{p}\frac{dT}{T}-R^{*}\frac{dP}{P}$;
+\item $ds=c_{p}\frac{d\bar{v}}{\bar{v}}+c_{v}\frac{dP}{P}$;
+\end{itemize}
+
+\subsection{Trasformazioni Politropiche}
+
+\begin{tabular}{|c|c|}
+\hline 
+Trasformazione & $n$\tabularnewline
+\hline 
+\hline 
+Isocora $(V=cost)$ & $n\pm\infty$\tabularnewline
+\hline 
+Isoterma $(T=cost)$ & $n=1$\tabularnewline
+\hline 
+Isobara $(P=cost)$ & $n=0$\tabularnewline
+\hline 
+Isoentropica / Adiabatica $(ds=0)$ oppure $(Q=0)$ & $n=\frac{c_{p}}{c_{v}}$\tabularnewline
+\hline 
+\end{tabular}
+\begin{itemize}
+\item $P\bar{v}^{n}=cost$;
+\item $T\bar{v}^{n-1}=cost$;
+\item $PT^{\frac{n}{1-n}}=cost$;
+\end{itemize}
+
+\subsection{Rendimenti}
+\begin{itemize}
+\item $\eta_{isoentropico}=\frac{L}{\overleftarrow{|Q}|}$=$\mbox{\ensuremath{\frac{|\overleftarrow{Q}-\overrightarrow{Q|}}{\overleftarrow{|Q}|}=1-\frac{|\overrightarrow{Q|}}{\overleftarrow{|Q|}}}}$;
+\item $\eta_{II_{P}}=\frac{\eta_{reale}}{\eta_{ideale}}=\frac{L_{reale}}{L_{ideale}}$;
+\end{itemize}
+
+\subsection{Sistemi Aperti}
+
+
+\subsubsection{Generale}
+\begin{itemize}
+\item $\dot{m}=\rho w\varOmega$ con $\varOmega=sezione$;
+\item $\frac{dE}{dt}=\overleftarrow{\dot{m}}[(\overleftarrow{h}-\overrightarrow{h})+g(\overleftarrow{z}-\overrightarrow{z})+\frac{\overleftarrow{w}^{2}-\overrightarrow{w}^{2}}{2}]+\overleftarrow{\dot{Q}}-\overrightarrow{L}$
+con $z=altezza$ e $g=accelerazione\,gravitazionale$;
+\item $\frac{dS}{dt}=\overleftarrow{\dot{m}}(\overleftarrow{s}-\overrightarrow{s})+\dot{S_{\overleftarrow{Q}}}+\overrightarrow{\dot{S_{irr}}}$;
+\end{itemize}
+
+\subsubsection{Macchina Aperta}
+
+Dispositivo adiabatico atto a scambiare lavoro per il quale si ipotizzano
+trascurabili le variazioni di energia potenziale e cinetica tra le
+sezioni di ingresso e di uscita.
+\begin{itemize}
+\item $\overleftarrow{\dot{m}}(\overleftarrow{h}-\overrightarrow{h})-\overrightarrow{L}=0$;
+\item $\overleftarrow{\dot{m}}(\overleftarrow{s}-\overrightarrow{s})+\dot{S}_{irr}=0$;
+
+
+\subsubsection{Turbina}
+\begin{itemize}
+\item $\eta_{isT}=\frac{\overrightarrow{\dot{L}}_{reale}}{\overrightarrow{\dot{L}}_{ideale}}=\frac{(h_{1}-h_{2^{'}})}{(h_{1}-h_{2})}$
+con $\eta_{is}=$ rendimento isoentropico;
+\end{itemize}
+
+\subsubsection{Compressore}
+\begin{itemize}
+\item $\eta_{isC}=\frac{\overrightarrow{\dot{L}}_{ideale}}{\overrightarrow{\dot{L}}_{reale}}=\frac{(h_{1}-h_{2})}{(h_{1}-h_{2^{'}})}$;
+\end{itemize}
+\end{itemize}
+
+\subsubsection{Scambiatore di Calore}
+
+Gli scambiatori sono sistemi aperti stazionari che operano senza scambio
+di lavoro per i quali si ipotizzano trascurabili le variazioni di
+energia potenziale e cinetica tra le sezioni di ingresso e di uscita.
+\begin{itemize}
+\item $\overleftarrow{\dot{m}}(\overleftarrow{h}-\overrightarrow{h})+\overleftarrow{\dot{Q}}=0$;
+\item $\overleftarrow{\dot{m}}(\overleftarrow{s}-\overrightarrow{s})+\dot{S}_{\overleftarrow{Q}}+\dot{S}_{irr}=0$;
+\item $\overleftarrow{\dot{Q}}=\overrightarrow{\dot{Q}}$
+\end{itemize}
+
+\subsubsection{Diffusore ($w\downarrow)$ e Ugello ($w\uparrow$)}
+
+I diffusori e gli ugelli sono sistemi aperti stazionari che operano
+senza scambio di lavoro né calore per i quali si ipotizzano trascurabili
+le variazioni di energia potenziale tra le sezioni di ingresso e di
+uscita.
+\begin{itemize}
+\item $[(\overleftarrow{h}-\overrightarrow{h})+\frac{\overleftarrow{w}^{2}-\overrightarrow{w}^{2}}{2}]=0$;
+\item $\overleftarrow{\dot{m}}(\overleftarrow{s}-\overrightarrow{s})+\dot{S}_{irr}=0$;
+\end{itemize}
+
+\subsubsection{Valvola di Laminazione}
+
+Le valvole di laminazione sono sistemi aperti stazionari che operano
+senza scambio di lavoro nè calore per i quali si ipotizzano trascurabili
+le variazioni di energia potenziale e cinetica tra le sezioni di ingresso
+e di uscita.
+\begin{itemize}
+\item $(\overleftarrow{h}-\overrightarrow{h})=0$;
+\item $\overleftarrow{\dot{m}}(\overleftarrow{s}-\overrightarrow{s})+\dot{S}_{irr}=0$;
+\end{itemize}
+
+\subsection{Macchine Motrici ($\protect\overrightarrow{L}$)}
+
+Converte energia termica in lavoro. 
+
+\includegraphics[height=0.25\paperheight]{Formulario/MacchinaMotriceComp}
+
+
+\subsubsection{Generale}
+\begin{itemize}
+\item $\eta_{reale}=1-\frac{T_{F}}{T_{C}}-\frac{T_{F}\cdot S_{irr}}{Q_{C}}$
+\item $\eta_{rev}=1-\frac{T_{F}}{T_{C}}$;
+\item $\Delta S_{irr}=-\frac{\overleftarrow{Q}}{T_{C/F}}+\frac{\overrightarrow{Q}}{T_{C/F}}$
+dove $Q$ è riferito alla macchina e $T_{C/F}$ è la temperatura associata
+al $Q$ corrispondente;
+\end{itemize}
+
+\subsection{Macchine Operatrici ($\protect\overleftarrow{L}$)}
+
+Trasferisce energia termica da uno o più serbatoi di calore a temperatura
+inferiore a uno o più serbatoi di calore a temperatura superiore.
+
+\includegraphics[height=0.25\paperheight]{Formulario/MacchinaOperatrice}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/MacchinaOperatriceComp}
+\begin{itemize}
+\item $\Delta S_{irr}=-\frac{\overleftarrow{Q}}{T_{C/F}}+\frac{\overrightarrow{Q}}{T_{C/F}}$
+dove $Q$ è riferito alla macchina e $T_{C/F}$ è la temperatura associata
+al $Q$ corrispondente;
+\end{itemize}
+
+\subsubsection{Macchine frigorifere}
+\begin{itemize}
+\item $L_{rev}=Q_{F}(\frac{T_{C}}{T_{F}}-1)=\frac{Q_{F}}{\varepsilon}$;
+\item $L_{reale}=L_{rev}+T_{C}S_{irr}$;
+\item $\varepsilon_{f}=\frac{Q_{F}}{L}=\frac{T_{F}}{T_{C}-T_{F}+\frac{T_{C}T_{F}S_{irr}}{\overleftarrow{Q}}}$
+;
+\item $\varepsilon_{f_{rev}}=\frac{T_{F}}{T_{C}-T_{F}}$;
+\end{itemize}
+
+\subsubsection{Macchine calorifere (pompe di calore)}
+\begin{itemize}
+\item $L_{rev}=Q_{C}(1-\frac{T_{F}}{T_{C}})=\frac{Q_{C}}{\varepsilon}$;
+\item $L_{reale}=L_{rev}+T_{F}S_{irr}$;
+\item $\varepsilon_{pdc}=\frac{Q_{C}}{L}=\frac{\overrightarrow{Q}+L}{L}=\varepsilon_{f}+1=\frac{T_{C}}{T_{C}-T_{F}+\frac{T_{C}T_{F}S_{irr}}{\overleftarrow{Q}}}$;
+\item $\varepsilon_{pdc_{rev}}=\frac{T_{C}}{T_{C}-T_{F}}$;
+\end{itemize}
+
+\subsection{Annotazioni}
+\begin{enumerate}
+\item Le transizioni di fase avvengono con $P=costante$;
+\item L'interpolazione per acquisire il titolo $x$ è data, ad esempio a
+partire da un volume $v$, da
+\end{enumerate}
+\[
+\mbox{x=\ensuremath{\frac{v-v_{l}}{v_{v}-v_{l}}}}
+\]
+
+
+dove $v_{l}$ è il volume di liquido saturo e $v_{v}$ è il volume
+di vapore saturo.
+
+
+\section{Cicli}
+
+L'indice $n$ nei seguenti cicli è l'indice per una trasformazione
+isoentropica. Quindi $n=\frac{c_{p}}{c_{v}}$.
+
+
+\subsection{Cicli simmetrici}
+
+Per i cicli simmetrici valgono le seguenti proprietà:
+
+\[
+\bar{v}_{1}\bar{v}_{3}=\bar{v}_{2}\bar{v}_{4}
+\]
+
+
+\[
+P_{1}P_{3}=P_{2}P_{4}
+\]
+
+
+\[
+T_{1}T_{3}=T_{2}T_{4}
+\]
+
+
+
+\subsection{Carnot}
+
+
+\subsubsection{Generale}
+\begin{itemize}
+\item $\eta_{rev}=1-\frac{T_{1}}{T_{3}}$;
+\end{itemize}
+
+\subsubsection{Carnot a Gas}
+
+Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
+
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotPV.PNG}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotTS.PNG}
+\begin{itemize}
+\item $S_{irr}=-\frac{\overleftarrow{Q}}{T_{C}}+\frac{\overrightarrow{Q}}{T_{F}}$;
+\item $\varDelta S=\frac{\overleftarrow{Q}}{T_{2}}=\frac{\overrightarrow{Q}}{T_{1}}$;
+\end{itemize}
+
+\subsubsection{Carnot a Vapore}
+
+\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVapore}\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVaporePV}\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVaporeTS}
+
+
+\subsection{Joule-Brayton}
+
+Il ciclo Joule-Brayton è un ciclo simmetrico ed un sistema aperto
+costituito da due isoentropiche e due isobare.
+
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/Brayton_pvTs}
+\begin{itemize}
+\item $\overleftarrow{Q}=\dot{m}(h_{3}-h_{2})=\dot{m}c_{p}(T_{3}-T_{2})$;
+\item $\overrightarrow{Q}=\dot{m}(h_{4}-h_{1})=\dot{m}c_{p}(T_{4}-T_{1})$;
+\item $l=c_{p}(T_{3}-T_{4})-c_{p}(T_{2}-T_{1})=c_{p}T_{3}(1-\frac{T_{4}}{T_{3}})-c_{p}T_{1}(\frac{T_{2}}{T_{1}}-1)$;
+\item $\eta_{JB}=1-\frac{T_{1}}{T_{2}}$;
+\item $r=\frac{P_{2}}{P_{1}}$ con $r=$ rapporto di compressione;
+\item $r_{pmin}=1$;
+\item $r_{pmax}=(\frac{T_{3}}{T_{1}})^{\frac{n}{n-1}}$;
+\end{itemize}
+Affinché si possa operare una rigenerazione bisogna che la temperatura
+di fine espansione sia maggiore della temperatura di fine compressione.
+
+
+\subsection{Diesel}
+
+Il ciclo Diesel è costituito da due isoentropiche, una isocora ed
+una isobara.
+
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/Diesel}
+\begin{itemize}
+\item $\eta_{D}=1-\frac{c_{v}T_{1}(\frac{T_{4}}{T_{1}}-1)}{c_{p}T_{2}(\frac{T_{3}}{T_{2}}-1)}$;
+\item $\eta=1-\frac{T_{4}-T_{1}}{n(T_{3}-T_{2})}$;
+\item $\eta=1-\frac{1}{r^{n-1}}\cdot[\frac{z^{n}-1}{n(z-1)}]$;
+\item $r=\frac{V_{1}}{V_{2}}$, rapporto di compressione volumetrico;
+\item $z=\frac{V_{3}}{V_{2}}$, rapporto di combustione;
+\end{itemize}
+
+\subsection{Otto}
+
+Ciclo simmetrico costituito da due isoentropiche e due isocore.
+
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoPV.PNG}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoTS.PNG}
+\begin{itemize}
+\item $\overleftarrow{Q}=u_{3}-u_{2}=c_{v}(T_{3}-T_{2})$;
+\item $\overrightarrow{Q}=u_{4}-u_{1}=c_{v}(T_{4}-T_{1})$;
+\item $l=c_{v}(T_{3}-T_{4})-c_{v}(T_{2}-T_{1})=c_{v}T_{3}(1-\frac{1}{r_{vol}^{n-1}})-c_{v}T_{1}(r_{vol}^{n-1}-1)=c_{v}T_{3}(1-\frac{T_{4}}{T_{3}})-c_{v}T_{1}(\frac{T_{2}}{T_{1}}-1)$;
+\item $\eta=1-\frac{T_{1}}{T_{2}}=1-r_{vol}^{1-n};$
+\item $r_{vol}=\frac{V_{1}}{V_{2}}$;
+\end{itemize}
+
+\subsection{Rankine}
+
+
+\subsubsection{Rankine Semplice}
+
+\includegraphics[height=0.25\paperheight]{Formulario/6894054_orig}
+
+L'acqua entra nella pompa $(1)$ come liquido saturo. Entra in caldaia,
+a $P=cost$, $(2)$ come liquido sottoraffreddato ed esce come vapore
+surriscaldato in $(3)$. Il vapore surriscaldato entra in turbina
+$(3)$ e si espande isoentropicamente; la pressione e la temperatura
+scendono sino ad arrivare in $(4)$ dove si trova una miscela satura
+di liquido e vapore ad elevato titolo. Il vapore entra nel condensatore
+$(4)$ e viene condensato a $P=cost$ uscendo come liquido saturo.
+\begin{itemize}
+\item $(1)\rightarrow(2)\,\,\,\Delta S=0$;
+\item $(2)\rightarrow(3)\,\,\,P=cost$;
+\item $(3)\rightarrow(4)\,\,\,\Delta S=0$;
+\item $(4)\rightarrow(1)\,\,\,P=cost,\,T=cost$;
+\end{itemize}
+
+\subsubsection{Rankine con surriscaldamento}
+
+\includegraphics[height=0.25\paperheight]{Formulario/Rankine_cycle_reheat_TS_sv}
+
+In aggiunta alle fasi di un ciclo Rankine semplice si ha un'espansione
+isoentropica in una turbina ad alta pressione $(3\rightarrow4)$,
+un surriscaldamento $(4\rightarrow5)$ ed un'espansione isoentropica
+in una turbina a bassa pressione $(5\rightarrow6)$:
+\begin{itemize}
+\item $(1)\rightarrow(2)\,\,\,\Delta S=0$;
+\item $(2)\rightarrow(3)\,\,\,P=cost$;
+\item $(3)\rightarrow(4)\,\,\,\Delta S=0$;
+\item $(4)\rightarrow(5)\,\,\,P=cost$;
+\item $(5)\rightarrow(6)\,\,\,\Delta S=0$;
+\item $(6)\rightarrow(1)\,\,\,P=cost,\,T=cost$;
+\end{itemize}
+
+\section{Trasmissione del Calore}
+
+
+\subsection{Unità di Misura}
+\begin{description}
+\item [{Flusso~Termico~Areico}] $\Phi=\dot{q}=\frac{\dot{Q}}{A}$;
+\item [{Conducibilità~Termica}] $k=[\frac{W}{m\cdot\text{°K}}]$;
+\item [{Coefficiente~Scambio~Termico~Convettivo}] $h=[\frac{W}{m^{2}\cdot\text{°K}}]$;
+\item [{Vettore~Flusso~di~Calore}] $\vec{q}=[\frac{W}{m^{2}}]$;
+\item [{Viscosità}] $\mu=[Pl]$;
+\item [{Diametro~o~Lunghezza~Caratteristica}] $D=[m]$;
+\item [{Resistenza}] $R=\frac{\text{°}K\cdot m^{2}}{W}$ oppure $R=\frac{\text{°K}}{W}$;
+\end{description}
+
+\subsection{Conduzione}
+
+
+\subsubsection{Unità di Misura}
+\begin{description}
+\item [{Potenza~Generata~su~Unità~di~Volume}] $\sigma=[\frac{W}{m^{3}}]$;
+\end{description}
+
+\subsubsection{Generale}
+\begin{itemize}
+\item $\dot{Q}=-\frac{1}{R_{forma}}\Delta T$;
+\item $\dot{Q}=-kA\frac{dT}{dr}$;
+\item $\dot{Q}=cost$;
+\end{itemize}
+
+\subsubsection{Coordinate Cartesiane}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Forma & $\Phi$ & $T$ & $\dot{Q}$ & $R_{tot}$\tabularnewline
+\hline 
+\hline 
+Parete piana infinita & $\sigma x-Ak$ & $-\frac{\sigma}{2k}+Ax+B$ & / & /\tabularnewline
+\hline 
+Lastra piana monostrato senza generazione di potenza & $\frac{\Delta T}{R_{TOT}\cdot A}$ & $\frac{T_{2}-T_{1}}{s}x+T_{1}$ & $\frac{\Delta T}{R_{tot}}$ & $(\sum\frac{s_{n}}{k_{n}}+\frac{1}{h_{i}}+\frac{1}{h_{e}})\cdot\frac{1}{A}$\tabularnewline
+\hline 
+\end{tabular}
+
+
+\subsubsection{Coordinate Cilindriche}
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Tipologia Cilindro & $\Phi$ & $\dot{q}_{per\,unit\grave{a}\,di\,lung}$ & $\dot{Q}$ & $T$\tabularnewline
+\hline 
+\hline 
+Pieno o cavo di altezza infinita & / & / & / & $-\frac{\sigma}{4k}r^{2}+Aln(r)+C$\tabularnewline
+\hline 
+Indefinito con generazione di potenza & $\frac{\sigma}{2}r-\frac{k}{r}C$ & / & / & $-\frac{\sigma}{4k}r^{2}+Cln(r)+D$\tabularnewline
+\hline 
+Pieno con generazione di potenza & $\frac{\sigma}{2}r$ & $\pi r^{2}\sigma$ & $V\sigma$ & $\frac{\sigma}{4k}(R^{2}-r^{2})+T_{2}$\tabularnewline
+\hline 
+Cavo senza generazione di potenza & $k\frac{(T_{i}-T_{e})}{ln(\frac{R_{e}}{R_{i}})}\cdot\frac{1}{r}$ & $\frac{2\pi k}{ln(\frac{R_{e}}{R_{i}})}\cdot(T_{i}-T_{e})$ & $k\frac{T_{i}-T_{e}}{ln(\frac{R_{e}}{R_{i}})}\cdot2\pi L$ & $T_{i}+\frac{T_{e}-R_{i}}{ln(\frac{R_{e}}{R_{i}})}\cdot ln(\frac{r}{R_{i}})$\tabularnewline
+\hline 
+\end{tabular}
+
+
+\subsubsection{Coordinate Sferiche}
+
+\begin{tabular}{|c|c|}
+\hline 
+Forma Sfera & $T$\tabularnewline
+\hline 
+\hline 
+Piena o cava & $-\frac{\sigma}{6k}r^{2}+\frac{A}{r}+B$\tabularnewline
+\hline 
+\end{tabular}
+
+
+\subsection{Convezione}
+\begin{itemize}
+\item $\dot{Q}_{CONV}=hA(T_{s}-T_{f})$ con $T_{s}=$ temperatura del solido
+e $T_{f}=$ temperatura del fluido;
+\end{itemize}
+
+\subsubsection{Raggio Critico di Isolamento}
+\begin{itemize}
+\item $\dot{Q}_{MAX}(\frac{d\dot{Q}}{dr^{2}})=0\,\Rightarrow r_{cr}=\frac{k_{isolante}}{h}$;
+\end{itemize}
+
+\subsubsection{Convezione Forzata}
+\begin{itemize}
+\item $Nu=$$\frac{hD}{k}$, numero di Nusselt;
+\item $Re=\frac{\rho wD}{\mu}$, numero di Reynolds; 
+\item $Pr=\frac{c_{p}\mu}{k}$, numero di Prandtl;
+\item $Pe=Re\cdot Pr=\frac{wD}{a}$, numero di Peclet;
+\end{itemize}
+
+\subsubsection{Convezione Naturale}
+\begin{itemize}
+\item $Gr=\frac{\rho^{2}g\beta\Delta TD^{3}}{\mu^{2}}$, numero di Grashoff;
+\item $Ra=Gr\cdot Pr=\frac{g\beta\Delta TD^{3}}{av}$, numero di Rayleigh;
+\end{itemize}
+
+\subsubsection{Proprietà dei numeri adimensionali}
+
+Ove presenti, se $Re>Re_{CRIT}$, $Pr_{MIN}<Pr<Pr_{MAX}$, $Ra>Ra_{CRIT}$
+il moto è turbolento.
+\begin{itemize}
+\item %
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Forma & $Nu$ con moto laminare & $Nu$ con moto turbolento & $Re_{CRIT}$ & \multicolumn{2}{c|}{$Pr_{CRIT}$} & $Ra_{CRIT}$\tabularnewline
+\hline 
+\multirow{2}{*}{Attorno ad un cilindro} & $\begin{cases}
+3.66 & se\,T_{parete}=cost\\
+4.36 & se\,h(T_{parete}-T_{\infty})=cost
+\end{cases}$ & / & $2\cdot10^{5}$ & \multicolumn{2}{c|}{/} & /\tabularnewline
+\cline{2-7} 
+ & \multicolumn{2}{c|}{$C\cdot Re^{m}\cdot Pr^{\frac{1}{3}}$} & / & \multicolumn{2}{c|}{/} & /\tabularnewline
+\hline 
+\multirow{2}{*}{In un condotto circolare} & / & $0.023\cdot Re^{0.8}\cdot Pr^{n}$ & $10^{4}$ & $0,7$ & $160$ & /\tabularnewline
+\cline{2-7} 
+ & / & $0.027\cdot Re^{0.8}\cdot Pr^{0.333}\cdot(\frac{\mu}{\mu_{P}})^{0.14}$ & $10^{4}$ & $0,7$ & $16700$ & /\tabularnewline
+\hline 
+Parete piana verticale & $0.59\cdot Ra^{0.25}$ & $0.10\cdot Ra^{0.33}$ & / & / & / & $10^{9}$\tabularnewline
+\hline 
+Lungo una lastra piana & $0,664\cdot Re^{\frac{1}{2}}\cdot Pr^{\frac{1}{3}}$ sse $Pr\geq0,6$ & $0,037\cdot Re^{\frac{4}{5}}\cdot Pr^{\frac{1}{3}}$ sse $0,6\leq Pr\leq60$
+e $5\cdot10^{5}\leq Re\leq10^{7}$ & $5\cdot10^{5}$ & / & / & /\tabularnewline
+\hline 
+\end{tabular}
+\item %
+\begin{tabular}{|c|c|c|}
+\hline 
+Tipo di moto & Condizione di regime laminare & Condizione di regime turbolento\tabularnewline
+\hline 
+\hline 
+In un condotto & $Re<2000$ & $Re>2500$\tabularnewline
+\hline 
+Lungo una lastra piana & $Re<5\cdot10^{5}$ & $Re>5\cdot10^{5}$\tabularnewline
+\hline 
+Attorno ad un cilindro & $Re<2\cdot10^{5}$ & $Re>2\cdot10^{5}$\tabularnewline
+\hline 
+\end{tabular}
+\end{itemize}
+In un condotto circolare in condizioni di moto turbolento si ha:
+
+$n=\begin{cases}
+0.3 & se\,il\,fluido\,si\,sta\,raffreddando\\
+0.4 & se\,il\,fluido\,si\,sta\,riscaldando
+\end{cases}$
+
+
+\subsection{Irraggiamento}
+
+
+\subsubsection{Unità di Misura}
+\begin{description}
+\item [{Potenza~Radiante}] $E=[\frac{W}{m^{2}}]$;
+\item [{Lunghezza~d'Onda}] $\lambda=[\mu m]$;
+\item [{Emissività}] $\varepsilon\in[0,1]\subseteq\mathbb{R}$;
+\item [{Radiosità}] $J=[\frac{W}{m^{2}}]$;
+\item [{Radiazione~Incidente}] $I=[\frac{W}{m^{2}}]$;
+\end{description}
+
+\subsubsection{Costanti}
+\begin{description}
+\item [{Costante~di~Stefan-Boltzmann}] $\sigma=5.67\cdot10^{-8\,}[\frac{W}{m^{2}\cdot\text{°K}}]$;
+\item [{Costante~Solare}] $I_{S}=1353\,\frac{W}{m^{2}}$;
+\end{description}
+
+\subsubsection{Generale}
+\begin{itemize}
+\item $\dot{Q}_{IRR}=\varepsilon\sigma A(T_{s})^{4}$ con $\varepsilon=$
+emissività $(0\leq\varepsilon\leq1)$;
+\item $E_{n}=\epsilon\sigma T^{4}$, potere emissivo di un corpo alla temperatura
+$T$;
+\item $(\lambda\cdot T)_{max\,potenza}=2897,8\,[\mu m\cdot\text{°K]}$;
+\item $\varepsilon(T)=\frac{E(T)}{E_{n}(T)}=\frac{E(T)}{\sigma T^{4}}$;
+\end{itemize}
+
+\subsubsection{Il fattore di vista}
+
+Il fattore di vista tra una superficie $i$ e una superficie $j$
+si indica $F_{i\rightarrow j}$ e si definisce <<Frazione della radiazione
+emessa dalla superficie $i$ che incide direttamente sulla superficie
+$j$>>. $(F\in\mathbb{R};\,0\leq F\leq1)$
+
+E.g:
+\begin{itemize}
+\item $F_{i\rightarrow j}=0$, le superfici $i$ e $j$ non sono in vista
+tra loro;
+\item $F_{i\rightarrow j}=1$, la superficie $j$ circonda completamente
+la $i$, per cui tutta la radiazione emessa da $i$ è intercettata
+da $j$;
+\end{itemize}
+Valgono le seguenti regole:
+\begin{itemize}
+\item $F_{i\rightarrow j}=F_{j\rightarrow i}$, se e solo se $A_{i}=A_{j}$;
+\item $F_{i\rightarrow j}\neq F_{j\rightarrow i},$ se e solo se $A_{i}\neq A_{j}$;
+\item $A_{i}F_{i\rightarrow j}=A_{j}F_{j\rightarrow i}$;
+\item $\sum_{j=1}^{n}F_{i\rightarrow j}=1$;
+\item $F_{A_{12}\rightarrow_{3}}\cdot(A_{1}+A_{2})=F_{A_{1}\rightarrow A_{3}}\cdot A_{1}+F_{A_{2}\rightarrow A_{3}}\cdot A_{2}$;
+\end{itemize}
+
+\subsubsection{Coefficienti di assorbimento, riflessione e trasmissione}
+\begin{description}
+\item [{Assorbimento}] $\alpha=\frac{I_{ass}}{I}$;
+\item [{Riflessione}] $\rho=\frac{I_{rifl}}{I}$;
+\item [{Trasmissione}] $\tau=\frac{I_{tr}}{I}$;
+\end{description}
+Sussistono inoltre le seguenti relazioni:
+\begin{itemize}
+\item $\alpha+\rho+\tau=1$, per superfici trasparenti;
+\item $\alpha+\rho=1$, per superfici opache;
+\item $\alpha=\varepsilon$ quando la differenza di temperatura tra due
+corpi $\Delta T<100\text{°K}$;
+\end{itemize}
+
+\subsubsection{Convenzioni per lo scambio termico tra superfici}
+\begin{description}
+\item [{$q_{1\rightarrow2}$}] Potenza termica per unità di superficie
+emessa dalla superficie 1 che incide sulla superficie 2;
+\item [{$q_{1-2}$}] Potenza termica per unità di superficie emessa dalla
+superficie 1 che viene assorbita dalla superficie 2;
+\item [{$q_{1,2}$}] Potenza termica netta per unità di superficie scambiata
+tra la superficie 1 e la superficie 2;
+\end{description}
+Inoltre valgono anche:
+\begin{itemize}
+\item $q_{1-2}=\alpha\cdot q_{1\rightarrow2}$;
+\item $q_{1,2}=q_{1-2}-q_{2-1}=-q_{2,1}$;
+\end{itemize}
+
+\subsubsection{Scambio termico tra superfici}
+
+Genericamente vale:
+\begin{itemize}
+\item $\dot{Q}_{1,2}=A_{1}F_{12}\sigma_{0}(T_{1}^{4}-T_{2}^{4})$;
+\end{itemize}
+In caso di superfici piane parallele indefinite si ha:
+\begin{itemize}
+\item %
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Tipologia & Superficie 1 & Superficie 2 & $q_{1,2}$\tabularnewline
+\hline 
+\hline 
+Nera - Nera & Nera & Nera & $\sigma_{0}(T_{1}^{4}-T_{2}^{4})$\tabularnewline
+\hline 
+Nera - Grigia & Nera & Grigia & $\epsilon_{2}\sigma_{0}(T_{1}^{4}-T_{2}^{4})$\tabularnewline
+\hline 
+Grigia - Grigia & Grigia & Grigia & $\frac{\sigma_{0}(T_{1}^{4}-T_{2}^{4})}{\frac{1}{\epsilon_{1}}+\frac{1}{\epsilon_{2}}-1}$\tabularnewline
+\hline 
+\end{tabular}
+\end{itemize}
+Per una superficie grigia opaca:
+\begin{itemize}
+\item $\begin{cases}
+J_{i}=E_{i}+\rho I_{i}=\epsilon_{i}E_{in}+(1-\epsilon_{i})I_{i}; & \epsilon=\alpha,\,\,\,\alpha+\rho=1;\\
+\dot{Q}_{i}=A_{i}(J_{i}-I_{i});
+\end{cases}$
+\end{itemize}
+Per superfici grigie formanti una cavità:
+\begin{itemize}
+\item $\dot{Q}_{1,2}=\frac{\sigma_{0}(T_{1}^{4}-T_{2}^{4})}{\frac{1-\epsilon_{1}}{\epsilon_{1}A_{1}}+\frac{1}{A_{1}F_{12}}+\frac{1-\epsilon_{2}}{\epsilon_{2}A_{2}}}$;\end{itemize}
+
+\end{document}
