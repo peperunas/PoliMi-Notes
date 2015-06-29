@@ -1182,6 +1182,16 @@ Converte energia termica in lavoro.
  
 \end_layout
 
+\begin_layout Standard
+\begin_inset Graphics
+	filename Formulario/MacchinaMotriceComp.jpg
+	height 25pheight%
+
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Generale
 \end_layout
@@ -1230,6 +1240,25 @@ Macchine Operatrici (
 \begin_layout Standard
 Trasferisce energia termica da uno o più serbatoi di calore a temperatura
  inferiore a uno o più serbatoi di calore a temperatura superiore.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Formulario/MacchinaOperatrice.gif
+	height 25pheight%
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Formulario/MacchinaOperatriceComp.jpg
+	width 50line%
+	height 25pheight%
+	keepAspectRatio
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1376,7 +1405,7 @@ L'indice
 \begin_inset Formula $n=\frac{c_{p}}{c_{v}}$
 \end_inset
 
-;
+.
 \end_layout
 
 \begin_layout Subsection
@@ -1424,25 +1453,8 @@ T_{1}T_{3}=T_{2}T_{4}
 Carnot
 \end_layout
 
-\begin_layout Standard
-Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename Formulario/CarnotPV.PNG
-	scale 35
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Formulario/CarnotTS.PNG
-	scale 40
-
-\end_inset
-
-
+\begin_layout Subsubsection
+Generale
 \end_layout
 
 \begin_layout Itemize
@@ -1450,6 +1462,35 @@ Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
 \end_inset
 
 ;
+\end_layout
+
+\begin_layout Subsubsection
+Carnot a Gas
+\end_layout
+
+\begin_layout Standard
+Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Formulario/CarnotPV.PNG
+	width 50line%
+	height 25pheight%
+	keepAspectRatio
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Formulario/CarnotTS.PNG
+	width 50line%
+	height 25pheight%
+	keepAspectRatio
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Itemize
@@ -1466,8 +1507,35 @@ Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
 ;
 \end_layout
 
+\begin_layout Subsubsection
+Carnot a Vapore
+\end_layout
+
 \begin_layout Standard
-\begin_inset Newpage newpage
+\begin_inset Graphics
+	filename Formulario/CarnotVapore.gif
+	width 33line%
+	height 25pheight%
+	keepAspectRatio
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Formulario/CarnotVaporePV.gif
+	width 33line%
+	height 25pheight%
+	keepAspectRatio
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Formulario/CarnotVaporeTS.jpg
+	width 33line%
+	height 25pheight%
+	keepAspectRatio
+
 \end_inset
 
 
@@ -1485,7 +1553,9 @@ Il ciclo Joule-Brayton è un ciclo simmetrico ed un sistema aperto costituito
 \begin_layout Standard
 \begin_inset Graphics
 	filename Formulario/Brayton_pvTs.png
-	scale 40
+	width 50line%
+	height 25pheight%
+	keepAspectRatio
 
 \end_inset
 
@@ -1561,7 +1631,9 @@ Il ciclo Diesel è costituito da due isoentropiche, una isocora ed una isobara.
 \begin_layout Standard
 \begin_inset Graphics
 	filename Formulario/Diesel.jpg
-	scale 20
+	width 50line%
+	height 25pheight%
+	keepAspectRatio
 
 \end_inset
 
@@ -1614,14 +1686,18 @@ Ciclo simmetrico costituito da due isoentropiche e due isocore.
 \begin_layout Standard
 \begin_inset Graphics
 	filename Formulario/OttoPV.PNG
-	scale 40
+	width 50line%
+	height 25pheight%
+	keepAspectRatio
 
 \end_inset
 
 
 \begin_inset Graphics
 	filename Formulario/OttoTS.PNG
-	scale 35
+	width 50line%
+	height 25pheight%
+	keepAspectRatio
 
 \end_inset
 
@@ -1674,7 +1750,7 @@ Rankine Semplice
 \begin_layout Standard
 \begin_inset Graphics
 	filename Formulario/6894054_orig.png
-	scale 60
+	height 25pheight%
 
 \end_inset
 
@@ -1756,7 +1832,7 @@ Rankine con surriscaldamento
 \begin_layout Standard
 \begin_inset Graphics
 	filename Formulario/Rankine_cycle_reheat_TS_sv.png
-	scale 20
+	height 25pheight%
 
 \end_inset
 
@@ -1928,7 +2004,11 @@ Caratteristica
 
 \begin_layout Description
 Resistenza 
-\begin_inset Formula $R=\frac{\text{°}K}{W}$
+\begin_inset Formula $R=\frac{\text{°}K\cdot m^{2}}{W}$
+\end_inset
+
+ oppure 
+\begin_inset Formula $R=\frac{\text{°K}}{W}$
 \end_inset
 
 ;
@@ -2134,7 +2214,7 @@ Lastra piana monostrato senza generazione di potenza
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\frac{\Delta T}{R_{TOT}}$
+\begin_inset Formula $\frac{\Delta T}{R_{TOT}\cdot A}$
 \end_inset
 
 
@@ -2158,7 +2238,7 @@ Lastra piana monostrato senza generazione di potenza
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $A\cdot\frac{\Delta T}{R_{tot}}$
+\begin_inset Formula $\frac{\Delta T}{R_{tot}}$
 \end_inset
 
 
@@ -2170,7 +2250,7 @@ Lastra piana monostrato senza generazione di potenza
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\sum\frac{s_{n}}{k_{n}}+\frac{1}{h_{i}}+\frac{1}{h_{e}}$
+\begin_inset Formula $(\sum\frac{s_{n}}{k_{n}}+\frac{1}{h_{i}}+\frac{1}{h_{e}})\cdot\frac{1}{A}$
 \end_inset
 
 
@@ -2549,13 +2629,6 @@ Piena o cava
 
 \end_layout
 
-\begin_layout Standard
-\begin_inset Newpage newpage
-\end_inset
-
-
-\end_layout
-
 \begin_layout Subsection
 Convezione
 \end_layout
@@ -2638,13 +2711,6 @@ Convezione Naturale
 \end_inset
 
 , numero di Rayleigh;
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage cleardoublepage
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -3378,13 +3444,6 @@ In un condotto circolare in condizioni di moto turbolento si ha:
 0.3 & se\,il\,fluido\,si\,sta\,raffreddando\\
 0.4 & se\,il\,fluido\,si\,sta\,riscaldando
 \end{cases}$
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-\begin_inset Newpage clearpage
 \end_inset
 
 
