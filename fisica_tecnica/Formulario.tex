@@ -3,10 +3,11 @@
 \RequirePackage{fix-cm}
 \documentclass[twoside,twocolumn,italian]{article}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{luainputenc}
+\usepackage[latin9]{inputenc}
 \usepackage[landscape]{geometry}
 \geometry{verbose,tmargin=1cm,bmargin=1.5cm,lmargin=1cm,rmargin=1cm}
 \usepackage{array}
+\usepackage{textcomp}
 \usepackage{multirow}
 \usepackage{amsthm}
 \usepackage{amsmath}
@@ -39,7 +40,7 @@
 \section{Termodinamica}
 
 
-\subsection{UnitÃ  di Misura}
+\subsection{Unità di Misura}
 \begin{description}
 \item [{Energia~Interna}] $U=[J]$, $\bar{u}=[\frac{J}{Kg}]$;
 \item [{Calore}] $Q=[J]$, $\bar{q}=[\frac{J}{Kg}]$;
@@ -47,16 +48,16 @@
 \item [{Lavoro}] $L=[J]$, $\bar{l}=[\frac{J}{Kg}]$;
 \item [{Potenza~Meccanica}] $\dot{L}=[\frac{J}{s}]=[W]$;
 \item [{Entalpia}] $H=[J]$, $\bar{h}=[\frac{J}{Kg}]$;
-\item [{Entropia}] $S=[\frac{J}{\text{Â°K}}]$, $\bar{s}=[\frac{J}{Kg\cdot\text{Â°K}}]$;
-\item [{Temperatura}] $T=[\text{Â°}K]$;
+\item [{Entropia}] $S=[\frac{J}{\text{\textdegree K}}]$, $\bar{s}=[\frac{J}{Kg\cdot\text{\textdegree K}}]$;
+\item [{Temperatura}] $T=[\text{\textdegree}K]$;
 \item [{Pressione}] $P=[Pa]$;
 \item [{Volume}] $V=[m^{3}]$, $\bar{v}=[\frac{m^{3}}{Kg}]$;
 \item [{Massa}] $m=[Kg]$;
-\item [{DensitÃ }] $\rho=[\frac{Kg}{m^{3}}]$;
-\item [{VelocitÃ }] $w=[\frac{m}{s}]$;
-\item [{Costante~Universale~dei~Gas}] $R=[\frac{J}{\text{Â°K}\cdot kmol}]$,
-$R^{*}=\frac{R}{M}=[\frac{J}{Kg\cdot\text{Â°K}}]$;
-\item [{Calore~Specifico}] $c=[\frac{J}{Kg\cdot\text{Â°K}}]$;
+\item [{Densità}] $\rho=[\frac{Kg}{m^{3}}]$;
+\item [{Velocità}] $w=[\frac{m}{s}]$;
+\item [{Costante~Universale~dei~Gas}] $R=[\frac{J}{\text{\textdegree K}\cdot kmol}]$,
+$R^{*}=\frac{R}{M}=[\frac{J}{Kg\cdot\text{\textdegree K}}]$;
+\item [{Calore~Specifico}] $c=[\frac{J}{Kg\cdot\text{\textdegree K}}]$;
 \item [{Massa~Molare}] $M=[\frac{Kg}{kmol}]$;
 \item [{Portata~Massica}] $\dot{m}=[\frac{Kg}{s}]$;
 \item [{Portata~Volumetrica}] $\dot{V}=\dot{m}\bar{v}=[\frac{m^{3}}{s}]$;
@@ -86,7 +87,7 @@ $R^{*}=\frac{R}{M}=[\frac{J}{Kg\cdot\text{Â°K}}]$;
 \item $O=16$;
 \end{itemize}
 
-\subsection{Generale e ProprietÃ  Gas}
+\subsection{Generale e Proprietà Gas}
 
 Da tenere sempre presente che
 \[
@@ -119,7 +120,7 @@ Poliatomico Non Lineare & $\frac{6}{2}R^{*}$ & $\frac{8}{2}R^{*}$\tabularnewline
 \hline 
 \end{tabular}
 \begin{itemize}
-\item $R=8314,4\frac{J}{\text{Â°K}\cdot kmol}$;
+\item $R=8314,4\frac{J}{\text{\textdegree K}\cdot kmol}$;
 \item $n=\frac{m}{M}$ dove $n$ = numero di moli;
 \item $c_{p}-c_{v}=R^{*}$, la relazione di Mayer;
 \item $\dot{V}=\dot{m}\bar{v}$ con $\dot{V}=$ portata volumetrica;
@@ -237,7 +238,7 @@ energia potenziale e cinetica tra le sezioni di ingresso e di uscita.
 \subsubsection{Diffusore ($w\downarrow)$ e Ugello ($w\uparrow$)}
 
 I diffusori e gli ugelli sono sistemi aperti stazionari che operano
-senza scambio di lavoro nÃ© calore per i quali si ipotizzano trascurabili
+senza scambio di lavoro né calore per i quali si ipotizzano trascurabili
 le variazioni di energia potenziale tra le sezioni di ingresso e di
 uscita.
 \begin{itemize}
@@ -248,7 +249,7 @@ uscita.
 \subsubsection{Valvola di Laminazione}
 
 Le valvole di laminazione sono sistemi aperti stazionari che operano
-senza scambio di lavoro nÃ¨ calore per i quali si ipotizzano trascurabili
+senza scambio di lavoro nè calore per i quali si ipotizzano trascurabili
 le variazioni di energia potenziale e cinetica tra le sezioni di ingresso
 e di uscita.
 \begin{itemize}
@@ -268,19 +269,19 @@ Converte energia termica in lavoro.
 \item $\eta_{reale}=1-\frac{T_{F}}{T_{C}}-\frac{T_{F}\cdot S_{irr}}{Q_{C}}$
 \item $\eta_{rev}=1-\frac{T_{F}}{T_{C}}$;
 \item $\Delta S_{irr}=-\frac{\overleftarrow{Q}}{T_{C/F}}+\frac{\overrightarrow{Q}}{T_{C/F}}$
-dove $Q$ Ã¨ riferito alla macchina e $T_{C/F}$ Ã¨ la temperatura associata
+dove $Q$ è riferito alla macchina e $T_{C/F}$ è la temperatura associata
 al $Q$ corrispondente;
 \end{itemize}
 
 \subsection{Macchine Operatrici ($\protect\overleftarrow{L}$)}
 
-Trasferisce energia termica da uno o piÃ¹ serbatoi di calore a temperatura
-inferiore a uno o piÃ¹ serbatoi di calore a temperatura superiore.
+Trasferisce energia termica da uno o più serbatoi di calore a temperatura
+inferiore a uno o più serbatoi di calore a temperatura superiore.
 
 \includegraphics[height=0.25\paperheight]{Formulario/MacchinaOperatrice}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/MacchinaOperatriceComp}
 \begin{itemize}
 \item $\Delta S_{irr}=-\frac{\overleftarrow{Q}}{T_{C/F}}+\frac{\overrightarrow{Q}}{T_{C/F}}$
-dove $Q$ Ã¨ riferito alla macchina e $T_{C/F}$ Ã¨ la temperatura associata
+dove $Q$ è riferito alla macchina e $T_{C/F}$ è la temperatura associata
 al $Q$ corrispondente;
 \end{itemize}
 
@@ -304,7 +305,7 @@ al $Q$ corrispondente;
 \subsection{Annotazioni}
 \begin{enumerate}
 \item Le transizioni di fase avvengono con $P=costante$;
-\item L'interpolazione per acquisire il titolo $x$ Ã¨ data, ad esempio a
+\item L'interpolazione per acquisire il titolo $x$ è data, ad esempio a
 partire da un volume $v$, da
 \end{enumerate}
 \[
@@ -312,19 +313,19 @@ partire da un volume $v$, da
 \]
 
 
-dove $v_{l}$ Ã¨ il volume di liquido saturo e $v_{v}$ Ã¨ il volume
+dove $v_{l}$ è il volume di liquido saturo e $v_{v}$ è il volume
 di vapore saturo.
 
 
 \section{Cicli}
 
-L'indice $n$ nei seguenti cicli Ã¨ l'indice per una trasformazione
+L'indice $n$ nei seguenti cicli è l'indice per una trasformazione
 isoentropica. Quindi $n=\frac{c_{p}}{c_{v}}$.
 
 
 \subsection{Cicli simmetrici}
 
-Per i cicli simmetrici valgono le seguenti proprietÃ :
+Per i cicli simmetrici valgono le seguenti proprietà:
 
 \[
 \bar{v}_{1}\bar{v}_{3}=\bar{v}_{2}\bar{v}_{4}
@@ -352,7 +353,7 @@ T_{1}T_{3}=T_{2}T_{4}
 
 \subsubsection{Carnot a Gas}
 
-Il ciclo di Carnot Ã¨ costituito da due isoentropiche e due isoterme.
+Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
 
 \includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotPV.PNG}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotTS.PNG}
 \begin{itemize}
@@ -367,7 +368,7 @@ Il ciclo di Carnot Ã¨ costituito da due isoentropiche e due isoterme.
 
 \subsection{Joule-Brayton}
 
-Il ciclo Joule-Brayton Ã¨ un ciclo simmetrico ed un sistema aperto
+Il ciclo Joule-Brayton è un ciclo simmetrico ed un sistema aperto
 costituito da due isoentropiche e due isobare.
 
 \includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/Brayton_pvTs}
@@ -380,13 +381,13 @@ costituito da due isoentropiche e due isobare.
 \item $r_{pmin}=1$;
 \item $r_{pmax}=(\frac{T_{3}}{T_{1}})^{\frac{n}{n-1}}$;
 \end{itemize}
-AffinchÃ© si possa operare una rigenerazione bisogna che la temperatura
+Affinché si possa operare una rigenerazione bisogna che la temperatura
 di fine espansione sia maggiore della temperatura di fine compressione.
 
 
 \subsection{Diesel}
 
-Il ciclo Diesel Ã¨ costituito da due isoentropiche, una isocora ed
+Il ciclo Diesel è costituito da due isoentropiche, una isocora ed
 una isobara.
 
 \includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/Diesel}
@@ -452,23 +453,24 @@ in una turbina a bassa pressione $(5\rightarrow6)$:
 \section{Trasmissione del Calore}
 
 
-\subsection{UnitÃ  di Misura}
+\subsection{Unità di Misura}
 \begin{description}
 \item [{Flusso~Termico~Areico}] $\Phi=\dot{q}=\frac{\dot{Q}}{A}$;
-\item [{ConducibilitÃ ~Termica}] $k=[\frac{W}{m\cdot\text{Â°K}}]$;
-\item [{Coefficiente~Scambio~Termico~Convettivo}] $h=[\frac{W}{m^{2}\cdot\text{Â°K}}]$;
+\item [{Conducibilità~Termica}] $k=[\frac{W}{m\cdot\text{\textdegree K}}]$;
+\item [{Coefficiente~Scambio~Termico~Convettivo}] $h=[\frac{W}{m^{2}\cdot\text{\textdegree K}}]$;
 \item [{Vettore~Flusso~di~Calore}] $\vec{q}=[\frac{W}{m^{2}}]$;
-\item [{ViscositÃ }] $\mu=[Pl]$;
+\item [{Viscosità}] $\mu=[Pl]$;
 \item [{Diametro~o~Lunghezza~Caratteristica}] $D=[m]$;
-\item [{Resistenza}] $R=\frac{\text{Â°}K\cdot m^{2}}{W}$ oppure $R=\frac{\text{Â°K}}{W}$;
+\item [{Resistenza}] $R=\frac{\text{\textdegree}K\cdot m^{2}}{W}$ oppure
+$R=\frac{\text{\textdegree K}}{W}$;
 \end{description}
 
 \subsection{Conduzione}
 
 
-\subsubsection{UnitÃ  di Misura}
+\subsubsection{Unità di Misura}
 \begin{description}
-\item [{Potenza~Generata~su~UnitÃ ~di~Volume}] $\sigma=[\frac{W}{m^{3}}]$;
+\item [{Potenza~Generata~su~Unità~di~Volume}] $\sigma=[\frac{W}{m^{3}}]$;
 \end{description}
 
 \subsubsection{Generale}
@@ -547,10 +549,10 @@ e $T_{f}=$ temperatura del fluido;
 \item $Ra=Gr\cdot Pr=\frac{g\beta\Delta TD^{3}}{av}$, numero di Rayleigh;
 \end{itemize}
 
-\subsubsection{ProprietÃ  dei numeri adimensionali}
+\subsubsection{Proprietà dei numeri adimensionali}
 
 Ove presenti, se $Re>Re_{CRIT}$, $Pr_{MIN}<Pr<Pr_{MAX}$, $Ra>Ra_{CRIT}$
-il moto Ã¨ turbolento.
+il moto è turbolento.
 \begin{itemize}
 \item %
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -599,28 +601,28 @@ $n=\begin{cases}
 \subsection{Irraggiamento}
 
 
-\subsubsection{UnitÃ  di Misura}
+\subsubsection{Unità di Misura}
 \begin{description}
 \item [{Potenza~Radiante}] $E=[\frac{W}{m^{2}}]$;
 \item [{Lunghezza~d'Onda}] $\lambda=[\mu m]$;
-\item [{EmissivitÃ }] $\varepsilon\in[0,1]\subseteq\mathbb{R}$;
-\item [{RadiositÃ }] $J=[\frac{W}{m^{2}}]$;
+\item [{Emissività}] $\varepsilon\in[0,1]\subseteq\mathbb{R}$;
+\item [{Radiosità}] $J=[\frac{W}{m^{2}}]$;
 \item [{Radiazione~Incidente}] $I=[\frac{W}{m^{2}}]$;
 \end{description}
 
 \subsubsection{Costanti}
 \begin{description}
-\item [{Costante~di~Stefan-Boltzmann}] $\sigma=5.67\cdot10^{-8\,}[\frac{W}{m^{2}\cdot\text{Â°K}}]$;
+\item [{Costante~di~Stefan-Boltzmann}] $\sigma=5.67\cdot10^{-8\,}[\frac{W}{m^{2}\cdot\text{\textdegree K}}]$;
 \item [{Costante~Solare}] $I_{S}=1353\,\frac{W}{m^{2}}$;
 \end{description}
 
 \subsubsection{Generale}
 \begin{itemize}
 \item $\dot{Q}_{IRR}=\varepsilon\sigma A(T_{s})^{4}$ con $\varepsilon=$
-emissivitÃ  $(0\leq\varepsilon\leq1)$;
+emissività $(0\leq\varepsilon\leq1)$;
 \item $E_{n}=\epsilon\sigma T^{4}$, potere emissivo di un corpo alla temperatura
 $T$;
-\item $(\lambda\cdot T)_{max\,potenza}=2897,8\,[\mu m\cdot\text{Â°K]}$;
+\item $(\lambda\cdot T)_{max\,potenza}=2897,8\,[\mu m\cdot\text{\textdegree K]}$;
 \item $\varepsilon(T)=\frac{E(T)}{E_{n}(T)}=\frac{E(T)}{\sigma T^{4}}$;
 \end{itemize}
 
@@ -636,7 +638,7 @@ E.g:
 \item $F_{i\rightarrow j}=0$, le superfici $i$ e $j$ non sono in vista
 tra loro;
 \item $F_{i\rightarrow j}=1$, la superficie $j$ circonda completamente
-la $i$, per cui tutta la radiazione emessa da $i$ Ã¨ intercettata
+la $i$, per cui tutta la radiazione emessa da $i$ è intercettata
 da $j$;
 \end{itemize}
 Valgono le seguenti regole:
@@ -659,16 +661,16 @@ Sussistono inoltre le seguenti relazioni:
 \item $\alpha+\rho+\tau=1$, per superfici trasparenti;
 \item $\alpha+\rho=1$, per superfici opache;
 \item $\alpha=\varepsilon$ quando la differenza di temperatura tra due
-corpi $\Delta T<100\text{Â°K}$;
+corpi $\Delta T<100\text{\textdegree K}$;
 \end{itemize}
 
 \subsubsection{Convenzioni per lo scambio termico tra superfici}
 \begin{description}
-\item [{$q_{1\rightarrow2}$}] Potenza termica per unitÃ  di superficie
+\item [{$q_{1\rightarrow2}$}] Potenza termica per unità di superficie
 emessa dalla superficie 1 che incide sulla superficie 2;
-\item [{$q_{1-2}$}] Potenza termica per unitÃ  di superficie emessa dalla
+\item [{$q_{1-2}$}] Potenza termica per unità di superficie emessa dalla
 superficie 1 che viene assorbita dalla superficie 2;
-\item [{$q_{1,2}$}] Potenza termica netta per unitÃ  di superficie scambiata
+\item [{$q_{1,2}$}] Potenza termica netta per unità di superficie scambiata
 tra la superficie 1 e la superficie 2;
 \end{description}
 Inoltre valgono anche:
@@ -706,7 +708,7 @@ J_{i}=E_{i}+\rho I_{i}=\epsilon_{i}E_{in}+(1-\epsilon_{i})I_{i}; & \epsilon=\alp
 \dot{Q}_{i}=A_{i}(J_{i}-I_{i});
 \end{cases}$
 \end{itemize}
-Per superfici grigie formanti una cavitÃ :
+Per superfici grigie formanti una cavità:
 \begin{itemize}
 \item $\dot{Q}_{1,2}=\frac{\sigma_{0}(T_{1}^{4}-T_{2}^{4})}{\frac{1-\epsilon_{1}}{\epsilon_{1}A_{1}}+\frac{1}{A_{1}F_{12}}+\frac{1-\epsilon_{2}}{\epsilon_{2}A_{2}}}$;\end{itemize}
 
