@@ -78,13 +78,13 @@ $R^{*}=\frac{R}{M}=[\frac{J}{Kg\cdot\text{\textdegree K}}]$;
 \item $1\,cal=4,184\,J;$
 \end{itemize}
 
-\subsection{Pesi Molari}
+\subsection{Masse Molari}
 \begin{itemize}
 \item $H=1$;
 \item $He=4$;
 \item $C=12$;
-\item $N=14$;
-\item $O=16$;
+\item $N=14,\,N_{2}=28$;
+\item $O=16,\,O_{2}=32$;
 \end{itemize}
 
 \subsection{Generale e Proprietà Gas}
@@ -150,33 +150,50 @@ Poliatomico Non Lineare & $\frac{6}{2}R^{*}$ & $\frac{8}{2}R^{*}$\tabularnewline
 \item $d\bar{h}=c_{p}dT$, se gas perfetto;
 \item $d\bar{h}=Tds+\bar{v}dP$;
 \item $d\bar{h}=\delta q+\bar{v}dP$;
-\item $\Delta h=l=v\Delta P$;\footnote{Vale per i liquidi.};
 \end{itemize}
 
 \subsubsection{Entropia}
 \begin{itemize}
 \item $ds=\frac{\delta q}{T}$, nel caso di un processo reversibile;
 \item $\varDelta S=\varDelta S_{\overleftarrow{Q}}+\varDelta S_{irr}$;
-\item $ds=\frac{dU}{T}$, valido nei liquidi; 
-\item $ds=c_{v}\frac{dT}{T}+R^{*}\frac{d\bar{v}}{\bar{v}}$;
-\item $ds=c_{p}\frac{dT}{T}-R^{*}\frac{dP}{P}$;
-\item $ds=c_{p}\frac{d\bar{v}}{\bar{v}}+c_{v}\frac{dP}{P}$;
+\item $ds=c_{v}\frac{dT}{T}+R^{*}\frac{d\bar{v}}{\bar{v}}$$\Rightarrow\Delta S=c_{v}ln(\frac{T_{2}}{T_{1}})+R^{*}ln(\frac{V_{2}}{V_{1}});$ 
+\item $ds=c_{p}\frac{dT}{T}-R^{*}\frac{dP}{P}\Rightarrow\Delta S=c_{p}ln(\frac{T_{2}}{T_{1}})-R^{*}ln(\frac{P_{2}}{P_{1}});$
+\item $ds=c_{p}\frac{d\bar{v}}{\bar{v}}+c_{v}\frac{dP}{P}\Rightarrow\Delta S=c_{p}ln(\frac{V_{2}}{V_{1}})+c_{v}ln(\frac{P_{2}}{P_{1}});$
+\item $\Delta S\geq0$ se il sistema è isolato;
+\end{itemize}
+
+\subsubsection{Liquidi}
+\begin{itemize}
+\item $c_{H_{2}0}=4186\frac{J}{kg\cdot\text{\textdegree K}};$
+\item $c=c_{v}=c_{p};$
+\item $du=\delta q=cdT;$
+\item $ds=c\frac{dT}{T}$;
+\item $v=cost$;
+\item $\Delta h=c\Delta T+v\Delta P;$
 \end{itemize}
 
 \subsection{Trasformazioni Politropiche}
 
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline 
-Trasformazione & $n$\tabularnewline
+Trasformazione & $n$=$\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $l$ & $q$\tabularnewline
 \hline 
 \hline 
-Isocora $(V=cost)$ & $n\pm\infty$\tabularnewline
+Isocora $(V=cost)$ & $n\pm\infty$ & $0$ & $c_{v}\Delta T$\tabularnewline
 \hline 
-Isoterma $(T=cost)$ & $n=1$\tabularnewline
+Isoterma $(T=cost)$ & $n=1$ & $\begin{cases}
+R^{*}Tln(\frac{V_{2}}{V_{1}})\\
+-R^{*}Tln(\frac{P_{2}}{P_{1}})
+\end{cases}$ & $\begin{cases}
+R^{*}Tln(\frac{V_{2}}{V_{1}})\\
+-R^{*}Tln(\frac{P_{2}}{P_{1}})
+\end{cases}$\tabularnewline
 \hline 
-Isobara $(P=cost)$ & $n=0$\tabularnewline
+Isobara $(P=cost)$ & $n=0$ & $P\Delta V$ & $c_{p}\Delta T$\tabularnewline
 \hline 
-Isoentropica / Adiabatica $(ds=0)$ oppure $(Q=0)$ & $n=\frac{c_{p}}{c_{v}}$\tabularnewline
+Isoentropica / Adiabatica $(ds=0)$ oppure $(Q=0)$ & $n=\frac{c_{p}}{c_{v}}$ & $-c_{v}\Delta T$ & $0$\tabularnewline
+\hline 
+Politropica generica & $\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $(c_{x}-c_{p})\Delta T$ & $c_{x}\Delta T$\tabularnewline
 \hline 
 \end{tabular}
 \begin{itemize}
@@ -187,8 +204,34 @@ Isoentropica / Adiabatica $(ds=0)$ oppure $(Q=0)$ & $n=\frac{c_{p}}{c_{v}}$\tabu
 
 \subsection{Rendimenti}
 \begin{itemize}
-\item $\eta_{isoentropico}=\frac{L}{\overleftarrow{|Q}|}$=$\mbox{\ensuremath{\frac{|\overleftarrow{Q}-\overrightarrow{Q|}}{\overleftarrow{|Q}|}=1-\frac{|\overrightarrow{Q|}}{\overleftarrow{|Q|}}}}$;
+\item $\eta_{confronto}=\frac{\eta_{serb-reale}}{\eta_{serb-ideale}};$
 \item $\eta_{II_{P}}=\frac{\eta_{reale}}{\eta_{ideale}}=\frac{L_{reale}}{L_{ideale}}$;
+\end{itemize}
+
+\subsection{Sistemi Bifase}
+
+
+\subsubsection{Generale}
+\begin{itemize}
+\item Le transizioni di fase avvengono con $P=costante$ e $T=costante$;
+\item $\begin{cases}
+\begin{cases}
+x=\ensuremath{\frac{v-v_{l}}{v_{v}-v_{l}};} & con\,x=titolo,\,v=propriet\grave{a}\,estensiva\\
+v_{lv}=v_{v}-v_{l}
+\end{cases}\\
+\mbox{\ensuremath{v=v_{l}+xv_{lv};}}\\
+\mbox{\ensuremath{h=h_{l}+xh_{lv};}}\\
+\mbox{\ensuremath{s=s_{l}+xs_{lv};}}\\
+\mbox{\ensuremath{u=u_{l}+xu_{lv};}}\\
+\\
+\end{cases}\mbox{}$
+\item $dh=d\overleftarrow{q};$
+\end{itemize}
+
+\subsubsection{Liquidi sottoraffreddati}
+\begin{itemize}
+\item $h\cong h_{l@T}$;
+\item $s\cong s_{l@T};$
 \end{itemize}
 
 \subsection{Sistemi Aperti}
@@ -200,6 +243,7 @@ Isoentropica / Adiabatica $(ds=0)$ oppure $(Q=0)$ & $n=\frac{c_{p}}{c_{v}}$\tabu
 \item $\frac{dE}{dt}=\overleftarrow{\dot{m}}[(\overleftarrow{h}-\overrightarrow{h})+g(\overleftarrow{z}-\overrightarrow{z})+\frac{\overleftarrow{w}^{2}-\overrightarrow{w}^{2}}{2}]+\overleftarrow{\dot{Q}}-\overrightarrow{L}$
 con $z=altezza$ e $g=accelerazione\,gravitazionale$;
 \item $\frac{dS}{dt}=\overleftarrow{\dot{m}}(\overleftarrow{s}-\overrightarrow{s})+\dot{S_{\overleftarrow{Q}}}+\overrightarrow{\dot{S_{irr}}}$;
+\item $\frac{dm}{dt}=\overleftarrow{m}-\overrightarrow{m};$
 \end{itemize}
 
 \subsubsection{Macchina Aperta}
@@ -218,7 +262,7 @@ sezioni di ingresso e di uscita.
 con $\eta_{is}=$ rendimento isoentropico;
 \end{itemize}
 
-\subsubsection{Compressore}
+\subsubsection{Compressore / Pompa di Calore}
 \begin{itemize}
 \item $\eta_{isC}=\frac{\overrightarrow{\dot{L}}_{ideale}}{\overrightarrow{\dot{L}}_{reale}}=\frac{(h_{1}-h_{2})}{(h_{1}-h_{2^{'}})}$;
 \end{itemize}
@@ -257,11 +301,9 @@ e di uscita.
 \item $\overleftarrow{\dot{m}}(\overleftarrow{s}-\overrightarrow{s})+\dot{S}_{irr}=0$;
 \end{itemize}
 
-\subsection{Macchine Motrici ($\protect\overrightarrow{L}$)}
+\subsection{Macchine Motrici a gas ($\protect\overrightarrow{L}$)}
 
 Converte energia termica in lavoro. 
-
-\includegraphics[height=0.25\paperheight]{Formulario/MacchinaMotriceComp}
 
 
 \subsubsection{Generale}
@@ -273,12 +315,12 @@ dove $Q$ è riferito alla macchina e $T_{C/F}$ è la temperatura associata
 al $Q$ corrispondente;
 \end{itemize}
 
-\subsection{Macchine Operatrici ($\protect\overleftarrow{L}$)}
+\subsection{Macchine Operatrici a gas ($\protect\overleftarrow{L}$)}
 
 Trasferisce energia termica da uno o più serbatoi di calore a temperatura
 inferiore a uno o più serbatoi di calore a temperatura superiore.
 
-\includegraphics[height=0.25\paperheight]{Formulario/MacchinaOperatrice}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/MacchinaOperatriceComp}
+\includegraphics[height=0.25\paperheight]{Formulario/MacchinaOperatrice}
 \begin{itemize}
 \item $\Delta S_{irr}=-\frac{\overleftarrow{Q}}{T_{C/F}}+\frac{\overrightarrow{Q}}{T_{C/F}}$
 dove $Q$ è riferito alla macchina e $T_{C/F}$ è la temperatura associata
@@ -301,21 +343,6 @@ al $Q$ corrispondente;
 \item $\varepsilon_{pdc}=\frac{Q_{C}}{L}=\frac{\overrightarrow{Q}+L}{L}=\varepsilon_{f}+1=\frac{T_{C}}{T_{C}-T_{F}+\frac{T_{C}T_{F}S_{irr}}{\overleftarrow{Q}}}$;
 \item $\varepsilon_{pdc_{rev}}=\frac{T_{C}}{T_{C}-T_{F}}$;
 \end{itemize}
-
-\subsection{Annotazioni}
-\begin{enumerate}
-\item Le transizioni di fase avvengono con $P=costante$;
-\item L'interpolazione per acquisire il titolo $x$ è data, ad esempio a
-partire da un volume $v$, da
-\end{enumerate}
-\[
-\mbox{x=\ensuremath{\frac{v-v_{l}}{v_{v}-v_{l}}}}
-\]
-
-
-dove $v_{l}$ è il volume di liquido saturo e $v_{v}$ è il volume
-di vapore saturo.
-
 
 \section{Cicli}
 
@@ -355,7 +382,7 @@ T_{1}T_{3}=T_{2}T_{4}
 
 Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
 
-\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotPV.PNG}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotTS.PNG}
+\includegraphics[height=0.25\paperheight]{Formulario/CarnotPVTS}
 \begin{itemize}
 \item $S_{irr}=-\frac{\overleftarrow{Q}}{T_{C}}+\frac{\overrightarrow{Q}}{T_{F}}$;
 \item $\varDelta S=\frac{\overleftarrow{Q}}{T_{2}}=\frac{\overrightarrow{Q}}{T_{1}}$;
@@ -363,7 +390,12 @@ Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
 
 \subsubsection{Carnot a Vapore}
 
-\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVapore}\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVaporePV}\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVaporeTS}
+\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVapore}\includegraphics[width=0.33\linewidth,height=0.25\paperheight]{Formulario/CarnotVaporePV}\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVaporeTS}
+
+
+\subsubsection{Carnot inverso a vapore}
+
+\includegraphics[height=0.25\paperheight]{Formulario/CarnotVaporeInverso}
 
 
 \subsection{Joule-Brayton}
@@ -371,7 +403,7 @@ Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
 Il ciclo Joule-Brayton è un ciclo simmetrico ed un sistema aperto
 costituito da due isoentropiche e due isobare.
 
-\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/Brayton_pvTs}
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/Brayton_pvTs}\includegraphics[width=0.5\linewidth,height=0.25\paperheight]{Formulario/JBComp}
 \begin{itemize}
 \item $\overleftarrow{Q}=\dot{m}(h_{3}-h_{2})=\dot{m}c_{p}(T_{3}-T_{2})$;
 \item $\overrightarrow{Q}=\dot{m}(h_{4}-h_{1})=\dot{m}c_{p}(T_{4}-T_{1})$;
@@ -417,7 +449,7 @@ Ciclo simmetrico costituito da due isoentropiche e due isocore.
 
 \subsubsection{Rankine Semplice}
 
-\includegraphics[height=0.25\paperheight]{Formulario/6894054_orig}
+\includegraphics[height=0.25\paperheight]{Formulario/6894054_orig}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/RankineComp}
 
 L'acqua entra nella pompa $(1)$ come liquido saturo. Entra in caldaia,
 a $P=cost$, $(2)$ come liquido sottoraffreddato ed esce come vapore
@@ -435,7 +467,7 @@ $(4)$ e viene condensato a $P=cost$ uscendo come liquido saturo.
 
 \subsubsection{Rankine con surriscaldamento}
 
-\includegraphics[height=0.25\paperheight]{Formulario/Rankine_cycle_reheat_TS_sv}
+\includegraphics[height=0.25\paperheight]{Formulario/RankineSurriscaldamento}
 
 In aggiunta alle fasi di un ciclo Rankine semplice si ha un'espansione
 isoentropica in una turbina ad alta pressione $(3\rightarrow4)$,
@@ -449,6 +481,11 @@ in una turbina a bassa pressione $(5\rightarrow6)$:
 \item $(5)\rightarrow(6)\,\,\,\Delta S=0$;
 \item $(6)\rightarrow(1)\,\,\,P=cost,\,T=cost$;
 \end{itemize}
+
+\subsubsection{Rankine Inverso}
+
+\includegraphics[height=0.25\paperheight]{Formulario/RankineInverso}
+
 
 \section{Trasmissione del Calore}
 

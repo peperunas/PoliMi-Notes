@@ -348,7 +348,7 @@ Calore
 \end_layout
 
 \begin_layout Subsection
-Pesi Molari
+Masse Molari
 \end_layout
 
 \begin_layout Itemize
@@ -373,14 +373,14 @@ Pesi Molari
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $N=14$
+\begin_inset Formula $N=14,\,N_{2}=28$
 \end_inset
 
 ;
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $O=16$
+\begin_inset Formula $O=16,\,O_{2}=32$
 \end_inset
 
 ;
@@ -731,23 +731,6 @@ Entalpia
 ;
 \end_layout
 
-\begin_layout Itemize
-\begin_inset Formula $\Delta h=l=v\Delta P$
-\end_inset
-
-;
-\begin_inset Foot
-status open
-
-\begin_layout Plain Layout
-Vale per i liquidi.
-\end_layout
-
-\end_inset
-
-;
-\end_layout
-
 \begin_layout Subsubsection
 Entropia
 \end_layout
@@ -767,31 +750,81 @@ Entropia
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $ds=\frac{dU}{T}$
-\end_inset
-
-, valido nei liquidi; 
-\end_layout
-
-\begin_layout Itemize
 \begin_inset Formula $ds=c_{v}\frac{dT}{T}+R^{*}\frac{d\bar{v}}{\bar{v}}$
 \end_inset
 
-;
+
+\begin_inset Formula $\Rightarrow\Delta S=c_{v}ln(\frac{T_{2}}{T_{1}})+R^{*}ln(\frac{V_{2}}{V_{1}});$
+\end_inset
+
+ 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $ds=c_{p}\frac{dT}{T}-R^{*}\frac{dP}{P}$
+\begin_inset Formula $ds=c_{p}\frac{dT}{T}-R^{*}\frac{dP}{P}\Rightarrow\Delta S=c_{p}ln(\frac{T_{2}}{T_{1}})-R^{*}ln(\frac{P_{2}}{P_{1}});$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ds=c_{p}\frac{d\bar{v}}{\bar{v}}+c_{v}\frac{dP}{P}\Rightarrow\Delta S=c_{p}ln(\frac{V_{2}}{V_{1}})+c_{v}ln(\frac{P_{2}}{P_{1}});$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta S\geq0$
+\end_inset
+
+ se il sistema è isolato;
+\end_layout
+
+\begin_layout Subsubsection
+Liquidi
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c_{H_{2}0}=4186\frac{J}{kg\cdot\text{°K}};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $c=c_{v}=c_{p};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $du=\delta q=cdT;$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $ds=c\frac{dT}{T}$
 \end_inset
 
 ;
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $ds=c_{p}\frac{d\bar{v}}{\bar{v}}+c_{v}\frac{dP}{P}$
+\begin_inset Formula $v=cost$
 \end_inset
 
 ;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\Delta h=c\Delta T+v\Delta P;$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -800,8 +833,10 @@ Trasformazioni Politropiche
 
 \begin_layout Standard
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="2">
+<lyxtabular version="3" rows="6" columns="4">
 <features rotate="0" tabularvalignment="middle">
+<column alignment="center" valignment="top">
+<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <row>
@@ -814,11 +849,39 @@ Trasformazione
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $n$
+\end_inset
+
+=
+\begin_inset Formula $\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $l$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $q$
 \end_inset
 
 
@@ -841,11 +904,35 @@ Isocora
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $n\pm\infty$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c_{v}\Delta T$
 \end_inset
 
 
@@ -868,11 +955,41 @@ Isoterma
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $n=1$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{cases}
+R^{*}Tln(\frac{V_{2}}{V_{1}})\\
+-R^{*}Tln(\frac{P_{2}}{P_{1}})
+\end{cases}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\begin{cases}
+R^{*}Tln(\frac{V_{2}}{V_{1}})\\
+-R^{*}Tln(\frac{P_{2}}{P_{1}})
+\end{cases}$
 \end_inset
 
 
@@ -895,7 +1012,7 @@ Isobara
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -907,9 +1024,33 @@ Isobara
 
 \end_inset
 </cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $P\Delta V$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c_{p}\Delta T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
 </row>
 <row>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
@@ -926,11 +1067,82 @@ Isoentropica / Adiabatica
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
 \begin_inset Formula $n=\frac{c_{p}}{c_{v}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $-c_{v}\Delta T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $0$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+</row>
+<row>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+Politropica generica
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $(c_{x}-c_{p})\Delta T$
+\end_inset
+
+
+\end_layout
+
+\end_inset
+</cell>
+<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
+\begin_inset Text
+
+\begin_layout Plain Layout
+\begin_inset Formula $c_{x}\Delta T$
 \end_inset
 
 
@@ -972,14 +1184,10 @@ Rendimenti
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $\eta_{isoentropico}=\frac{L}{\overleftarrow{|Q}|}$
+\begin_inset Formula $\eta_{confronto}=\frac{\eta_{serb-reale}}{\eta_{serb-ideale}};$
 \end_inset
 
-=
-\begin_inset Formula $\mbox{\ensuremath{\frac{|\overleftarrow{Q}-\overrightarrow{Q|}}{\overleftarrow{|Q}|}=1-\frac{|\overrightarrow{Q|}}{\overleftarrow{|Q|}}}}$
-\end_inset
 
-;
 \end_layout
 
 \begin_layout Itemize
@@ -987,6 +1195,68 @@ Rendimenti
 \end_inset
 
 ;
+\end_layout
+
+\begin_layout Subsection
+Sistemi Bifase
+\end_layout
+
+\begin_layout Subsubsection
+Generale
+\end_layout
+
+\begin_layout Itemize
+Le transizioni di fase avvengono con 
+\begin_inset Formula $P=costante$
+\end_inset
+
+ e 
+\begin_inset Formula $T=costante$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $\begin{cases}
+\begin{cases}
+x=\ensuremath{\frac{v-v_{l}}{v_{v}-v_{l}};} & con\,x=titolo,\,v=proprietà\,estensiva\\
+v_{lv}=v_{v}-v_{l}
+\end{cases}\\
+\mbox{\ensuremath{v=v_{l}+xv_{lv};}}\\
+\mbox{\ensuremath{h=h_{l}+xh_{lv};}}\\
+\mbox{\ensuremath{s=s_{l}+xs_{lv};}}\\
+\mbox{\ensuremath{u=u_{l}+xu_{lv};}}\\
+\\
+\end{cases}\mbox{}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $dh=d\overleftarrow{q};$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Liquidi sottoraffreddati
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $h\cong h_{l@T}$
+\end_inset
+
+;
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $s\cong s_{l@T};$
+\end_inset
+
+
 \end_layout
 
 \begin_layout Subsection
@@ -1030,6 +1300,13 @@ Generale
 ;
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $\frac{dm}{dt}=\overleftarrow{m}-\overrightarrow{m};$
+\end_inset
+
+
+\end_layout
+
 \begin_layout Subsubsection
 Macchina Aperta
 \end_layout
@@ -1071,7 +1348,7 @@ Turbina
 \end_layout
 
 \begin_layout Subsubsection
-Compressore
+Compressore / Pompa di Calore
 \end_layout
 
 \begin_layout Itemize
@@ -1170,7 +1447,7 @@ i di energia potenziale e cinetica tra le sezioni di ingresso e di uscita.
 \end_layout
 
 \begin_layout Subsection
-Macchine Motrici (
+Macchine Motrici a gas (
 \begin_inset Formula $\overrightarrow{L}$
 \end_inset
 
@@ -1180,16 +1457,6 @@ Macchine Motrici (
 \begin_layout Standard
 Converte energia termica in lavoro.
  
-\end_layout
-
-\begin_layout Standard
-\begin_inset Graphics
-	filename Formulario/MacchinaMotriceComp.jpg
-	height 25pheight%
-
-\end_inset
-
-
 \end_layout
 
 \begin_layout Subsubsection
@@ -1230,7 +1497,7 @@ Generale
 \end_layout
 
 \begin_layout Subsection
-Macchine Operatrici (
+Macchine Operatrici a gas (
 \begin_inset Formula $\overleftarrow{L}$
 \end_inset
 
@@ -1244,17 +1511,8 @@ Trasferisce energia termica da uno o più serbatoi di calore a temperatura
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename Formulario/MacchinaOperatrice.gif
+	filename Formulario/MacchinaOperatrice.png
 	height 25pheight%
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Formulario/MacchinaOperatriceComp.jpg
-	width 50line%
-	height 25pheight%
-	keepAspectRatio
 
 \end_inset
 
@@ -1344,53 +1602,6 @@ Macchine calorifere (pompe di calore)
 ;
 \end_layout
 
-\begin_layout Subsection
-Annotazioni
-\end_layout
-
-\begin_layout Enumerate
-Le transizioni di fase avvengono con 
-\begin_inset Formula $P=costante$
-\end_inset
-
-;
-\end_layout
-
-\begin_layout Enumerate
-L'interpolazione per acquisire il titolo 
-\begin_inset Formula $x$
-\end_inset
-
- è data, ad esempio a partire da un volume 
-\begin_inset Formula $v$
-\end_inset
-
-, da
-\end_layout
-
-\begin_layout Standard
-\begin_inset Formula 
-\[
-\mbox{x=\ensuremath{\frac{v-v_{l}}{v_{v}-v_{l}}}}
-\]
-
-\end_inset
-
-
-\end_layout
-
-\begin_layout Standard
-dove 
-\begin_inset Formula $v_{l}$
-\end_inset
-
- è il volume di liquido saturo e 
-\begin_inset Formula $v_{v}$
-\end_inset
-
- è il volume di vapore saturo.
-\end_layout
-
 \begin_layout Section
 Cicli
 \end_layout
@@ -1474,19 +1685,8 @@ Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename Formulario/CarnotPV.PNG
-	width 50line%
+	filename Formulario/CarnotPVTS.png
 	height 25pheight%
-	keepAspectRatio
-
-\end_inset
-
-
-\begin_inset Graphics
-	filename Formulario/CarnotTS.PNG
-	width 50line%
-	height 25pheight%
-	keepAspectRatio
 
 \end_inset
 
@@ -1522,10 +1722,9 @@ Carnot a Vapore
 
 
 \begin_inset Graphics
-	filename Formulario/CarnotVaporePV.gif
+	filename Formulario/CarnotVaporePV.png
 	width 33line%
 	height 25pheight%
-	keepAspectRatio
 
 \end_inset
 
@@ -1535,6 +1734,20 @@ Carnot a Vapore
 	width 33line%
 	height 25pheight%
 	keepAspectRatio
+
+\end_inset
+
+
+\end_layout
+
+\begin_layout Subsubsection
+Carnot inverso a vapore
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Formulario/CarnotVaporeInverso.jpg
+	height 25pheight%
 
 \end_inset
 
@@ -1556,6 +1769,14 @@ Il ciclo Joule-Brayton è un ciclo simmetrico ed un sistema aperto costituito
 	width 50line%
 	height 25pheight%
 	keepAspectRatio
+
+\end_inset
+
+
+\begin_inset Graphics
+	filename Formulario/JBComp.jpg
+	width 50line%
+	height 25pheight%
 
 \end_inset
 
@@ -1755,6 +1976,15 @@ Rankine Semplice
 \end_inset
 
 
+\begin_inset Graphics
+	filename Formulario/RankineComp.jpg
+	width 50line%
+	height 25pheight%
+	keepAspectRatio
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Standard
@@ -1831,7 +2061,7 @@ Rankine con surriscaldamento
 
 \begin_layout Standard
 \begin_inset Graphics
-	filename Formulario/Rankine_cycle_reheat_TS_sv.png
+	filename Formulario/RankineSurriscaldamento.jpg
 	height 25pheight%
 
 \end_inset
@@ -1896,6 +2126,20 @@ ica in una turbina ad alta pressione
 \end_inset
 
 ;
+\end_layout
+
+\begin_layout Subsubsection
+Rankine Inverso
+\end_layout
+
+\begin_layout Standard
+\begin_inset Graphics
+	filename Formulario/RankineInverso.jpg
+	height 25pheight%
+
+\end_inset
+
+
 \end_layout
 
 \begin_layout Section
