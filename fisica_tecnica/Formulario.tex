@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage[landscape]{geometry}
-\geometry{verbose,tmargin=1cm,bmargin=1.5cm,lmargin=1cm,rmargin=1cm}
+\geometry{verbose,tmargin=0.5cm,bmargin=0.5cm,lmargin=0.5cm,rmargin=0.5cm}
 \usepackage{array}
 \usepackage{textcomp}
 \usepackage{multirow}
@@ -36,6 +36,13 @@
 \title{Formulario Fisica Tecnica - Giulio De Pasquale}
 
 \maketitle
+\tableofcontents{}
+
+\listoftables
+
+
+\cleardoublepage{}
+
 
 \section{Termodinamica}
 
@@ -106,19 +113,6 @@ Inoltre, il $I$ principio della termodinamica impone che
 \Delta U=\overleftarrow{Q}-\overrightarrow{L}
 \]
 
-
-\begin{tabular}{|c|c|c|}
-\hline 
-Tipologia Gas & $c_{v}$ & $c_{p}$\tabularnewline
-\hline 
-\hline 
-Monoatomico & $\frac{3}{2}R^{*}$ & $\frac{5}{2}R^{*}$\tabularnewline
-\hline 
-Biatomico / Politatomico Lineare & $\frac{5}{2}R^{*}$ & $\frac{7}{2}R^{*}$\tabularnewline
-\hline 
-Poliatomico Non Lineare & $\frac{6}{2}R^{*}$ & $\frac{8}{2}R^{*}$\tabularnewline
-\hline 
-\end{tabular}
 \begin{itemize}
 \item $R=8314,4\frac{J}{\text{\textdegree K}\cdot kmol}$;
 \item $n=\frac{m}{M}$ dove $n$ = numero di moli;
@@ -173,29 +167,6 @@ Poliatomico Non Lineare & $\frac{6}{2}R^{*}$ & $\frac{8}{2}R^{*}$\tabularnewline
 \end{itemize}
 
 \subsection{Trasformazioni Politropiche}
-
-\begin{tabular}{|c|c|c|c|}
-\hline 
-Trasformazione & $n$=$\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $l$ & $q$\tabularnewline
-\hline 
-\hline 
-Isocora $(V=cost)$ & $n\pm\infty$ & $0$ & $c_{v}\Delta T$\tabularnewline
-\hline 
-Isoterma $(T=cost)$ & $n=1$ & $\begin{cases}
-R^{*}Tln(\frac{V_{2}}{V_{1}})\\
--R^{*}Tln(\frac{P_{2}}{P_{1}})
-\end{cases}$ & $\begin{cases}
-R^{*}Tln(\frac{V_{2}}{V_{1}})\\
--R^{*}Tln(\frac{P_{2}}{P_{1}})
-\end{cases}$\tabularnewline
-\hline 
-Isobara $(P=cost)$ & $n=0$ & $P\Delta V$ & $c_{p}\Delta T$\tabularnewline
-\hline 
-Isoentropica / Adiabatica $(ds=0)$ oppure $(Q=0)$ & $n=\frac{c_{p}}{c_{v}}$ & $-c_{v}\Delta T$ & $0$\tabularnewline
-\hline 
-Politropica generica & $\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $(c_{x}-c_{p})\Delta T$ & $c_{x}\Delta T$\tabularnewline
-\hline 
-\end{tabular}
 \begin{itemize}
 \item $P\bar{v}^{n}=cost$;
 \item $T\bar{v}^{n-1}=cost$;
@@ -346,9 +317,12 @@ al $Q$ corrispondente;
 
 \section{Cicli}
 
-L'indice $n$ nei seguenti cicli è l'indice per una trasformazione
-isoentropica. Quindi $n=\frac{c_{p}}{c_{v}}$.
 
+\subsubsection{Generale}
+\begin{itemize}
+\item $\eta=\frac{L_{netto}}{\overleftarrow{Q}};$
+\item $n=\frac{c_{p}}{c_{v}};$
+\end{itemize}
 
 \subsection{Cicli simmetrici}
 
@@ -408,7 +382,7 @@ costituito da due isoentropiche e due isobare.
 \item $\overleftarrow{Q}=\dot{m}(h_{3}-h_{2})=\dot{m}c_{p}(T_{3}-T_{2})$;
 \item $\overrightarrow{Q}=\dot{m}(h_{4}-h_{1})=\dot{m}c_{p}(T_{4}-T_{1})$;
 \item $l=c_{p}(T_{3}-T_{4})-c_{p}(T_{2}-T_{1})=c_{p}T_{3}(1-\frac{T_{4}}{T_{3}})-c_{p}T_{1}(\frac{T_{2}}{T_{1}}-1)$;
-\item $\eta_{JB}=1-\frac{T_{1}}{T_{2}}$;
+\item $\eta_{JB}=1-\frac{T_{1}}{T_{2}}=1-\frac{1}{r^{\frac{n-1}{n}}}$;
 \item $r=\frac{P_{2}}{P_{1}}$ con $r=$ rapporto di compressione;
 \item $r_{pmin}=1$;
 \item $r_{pmax}=(\frac{T_{3}}{T_{1}})^{\frac{n}{n-1}}$;
@@ -484,7 +458,7 @@ in una turbina a bassa pressione $(5\rightarrow6)$:
 
 \subsubsection{Rankine Inverso}
 
-\includegraphics[height=0.25\paperheight]{Formulario/RankineInverso}
+\includegraphics[width=0.5\linewidth,height=0.35\paperheight]{Formulario/RankineInverso}
 
 
 \section{Trasmissione del Calore}
@@ -493,10 +467,11 @@ in una turbina a bassa pressione $(5\rightarrow6)$:
 \subsection{Unità di Misura}
 \begin{description}
 \item [{Flusso~Termico~Areico}] $\Phi=\dot{q}=\frac{\dot{Q}}{A}$;
-\item [{Conducibilità~Termica}] $k=[\frac{W}{m\cdot\text{\textdegree K}}]$;
+\item [{Conducibilità~Termica}] $k=[\frac{W}{m\cdot\text{\textdegree K}}],$
+indipendente dalla pressione;
 \item [{Coefficiente~Scambio~Termico~Convettivo}] $h=[\frac{W}{m^{2}\cdot\text{\textdegree K}}]$;
 \item [{Vettore~Flusso~di~Calore}] $\vec{q}=[\frac{W}{m^{2}}]$;
-\item [{Viscosità}] $\mu=[Pl]$;
+\item [{Viscosità}] $\mu=[Pl]$, indipendente dalla pressione;
 \item [{Diametro~o~Lunghezza~Caratteristica}] $D=[m]$;
 \item [{Resistenza}] $R=\frac{\text{\textdegree}K\cdot m^{2}}{W}$ oppure
 $R=\frac{\text{\textdegree K}}{W}$;
@@ -517,50 +492,6 @@ $R=\frac{\text{\textdegree K}}{W}$;
 \item $\dot{Q}=cost$;
 \end{itemize}
 
-\subsubsection{Coordinate Cartesiane}
-
-\begin{tabular}{|c|c|c|c|c|}
-\hline 
-Forma & $\Phi$ & $T$ & $\dot{Q}$ & $R_{tot}$\tabularnewline
-\hline 
-\hline 
-Parete piana infinita & $\sigma x-Ak$ & $-\frac{\sigma}{2k}+Ax+B$ & / & /\tabularnewline
-\hline 
-Lastra piana monostrato senza generazione di potenza & $\frac{\Delta T}{R_{TOT}\cdot A}$ & $\frac{T_{2}-T_{1}}{s}x+T_{1}$ & $\frac{\Delta T}{R_{tot}}$ & $(\sum\frac{s_{n}}{k_{n}}+\frac{1}{h_{i}}+\frac{1}{h_{e}})\cdot\frac{1}{A}$\tabularnewline
-\hline 
-\end{tabular}
-
-
-\subsubsection{Coordinate Cilindriche}
-
-\begin{tabular}{|c|c|c|c|c|}
-\hline 
-Tipologia Cilindro & $\Phi$ & $\dot{q}_{per\,unit\grave{a}\,di\,lung}$ & $\dot{Q}$ & $T$\tabularnewline
-\hline 
-\hline 
-Pieno o cavo di altezza infinita & / & / & / & $-\frac{\sigma}{4k}r^{2}+Aln(r)+C$\tabularnewline
-\hline 
-Indefinito con generazione di potenza & $\frac{\sigma}{2}r-\frac{k}{r}C$ & / & / & $-\frac{\sigma}{4k}r^{2}+Cln(r)+D$\tabularnewline
-\hline 
-Pieno con generazione di potenza & $\frac{\sigma}{2}r$ & $\pi r^{2}\sigma$ & $V\sigma$ & $\frac{\sigma}{4k}(R^{2}-r^{2})+T_{2}$\tabularnewline
-\hline 
-Cavo senza generazione di potenza & $k\frac{(T_{i}-T_{e})}{ln(\frac{R_{e}}{R_{i}})}\cdot\frac{1}{r}$ & $\frac{2\pi k}{ln(\frac{R_{e}}{R_{i}})}\cdot(T_{i}-T_{e})$ & $k\frac{T_{i}-T_{e}}{ln(\frac{R_{e}}{R_{i}})}\cdot2\pi L$ & $T_{i}+\frac{T_{e}-R_{i}}{ln(\frac{R_{e}}{R_{i}})}\cdot ln(\frac{r}{R_{i}})$\tabularnewline
-\hline 
-\end{tabular}
-
-
-\subsubsection{Coordinate Sferiche}
-
-\begin{tabular}{|c|c|}
-\hline 
-Forma Sfera & $T$\tabularnewline
-\hline 
-\hline 
-Piena o cava & $-\frac{\sigma}{6k}r^{2}+\frac{A}{r}+B$\tabularnewline
-\hline 
-\end{tabular}
-
-
 \subsection{Convezione}
 \begin{itemize}
 \item $\dot{Q}_{CONV}=hA(T_{s}-T_{f})$ con $T_{s}=$ temperatura del solido
@@ -576,7 +507,7 @@ e $T_{f}=$ temperatura del fluido;
 \begin{itemize}
 \item $Nu=$$\frac{hD}{k}$, numero di Nusselt;
 \item $Re=\frac{\rho wD}{\mu}$, numero di Reynolds; 
-\item $Pr=\frac{c_{p}\mu}{k}$, numero di Prandtl;
+\item $Pr=\frac{c_{p}\mu}{k}$, numero di Prandtl, indipendente dalla pressione;
 \item $Pe=Re\cdot Pr=\frac{wD}{a}$, numero di Peclet;
 \end{itemize}
 
@@ -585,55 +516,6 @@ e $T_{f}=$ temperatura del fluido;
 \item $Gr=\frac{\rho^{2}g\beta\Delta TD^{3}}{\mu^{2}}$, numero di Grashoff;
 \item $Ra=Gr\cdot Pr=\frac{g\beta\Delta TD^{3}}{av}$, numero di Rayleigh;
 \end{itemize}
-
-\subsubsection{Proprietà dei numeri adimensionali}
-
-Ove presenti, se $Re>Re_{CRIT}$, $Pr_{MIN}<Pr<Pr_{MAX}$, $Ra>Ra_{CRIT}$
-il moto è turbolento.
-\begin{itemize}
-\item %
-\begin{tabular}{|c|c|c|c|c|c|c|}
-\hline 
-Forma & $Nu$ con moto laminare & $Nu$ con moto turbolento & $Re_{CRIT}$ & \multicolumn{2}{c|}{$Pr_{CRIT}$} & $Ra_{CRIT}$\tabularnewline
-\hline 
-\multirow{2}{*}{Attorno ad un cilindro} & $\begin{cases}
-3.66 & se\,T_{parete}=cost\\
-4.36 & se\,h(T_{parete}-T_{\infty})=cost
-\end{cases}$ & / & $2\cdot10^{5}$ & \multicolumn{2}{c|}{/} & /\tabularnewline
-\cline{2-7} 
- & \multicolumn{2}{c|}{$C\cdot Re^{m}\cdot Pr^{\frac{1}{3}}$} & / & \multicolumn{2}{c|}{/} & /\tabularnewline
-\hline 
-\multirow{2}{*}{In un condotto circolare} & / & $0.023\cdot Re^{0.8}\cdot Pr^{n}$ & $10^{4}$ & $0,7$ & $160$ & /\tabularnewline
-\cline{2-7} 
- & / & $0.027\cdot Re^{0.8}\cdot Pr^{0.333}\cdot(\frac{\mu}{\mu_{P}})^{0.14}$ & $10^{4}$ & $0,7$ & $16700$ & /\tabularnewline
-\hline 
-Parete piana verticale & $0.59\cdot Ra^{0.25}$ & $0.10\cdot Ra^{0.33}$ & / & / & / & $10^{9}$\tabularnewline
-\hline 
-Lungo una lastra piana & $0,664\cdot Re^{\frac{1}{2}}\cdot Pr^{\frac{1}{3}}$ sse $Pr\geq0,6$ & $0,037\cdot Re^{\frac{4}{5}}\cdot Pr^{\frac{1}{3}}$ sse $0,6\leq Pr\leq60$
-e $5\cdot10^{5}\leq Re\leq10^{7}$ & $5\cdot10^{5}$ & / & / & /\tabularnewline
-\hline 
-\end{tabular}
-\item %
-\begin{tabular}{|c|c|c|}
-\hline 
-Tipo di moto & Condizione di regime laminare & Condizione di regime turbolento\tabularnewline
-\hline 
-\hline 
-In un condotto & $Re<2000$ & $Re>2500$\tabularnewline
-\hline 
-Lungo una lastra piana & $Re<5\cdot10^{5}$ & $Re>5\cdot10^{5}$\tabularnewline
-\hline 
-Attorno ad un cilindro & $Re<2\cdot10^{5}$ & $Re>2\cdot10^{5}$\tabularnewline
-\hline 
-\end{tabular}
-\end{itemize}
-In un condotto circolare in condizioni di moto turbolento si ha:
-
-$n=\begin{cases}
-0.3 & se\,il\,fluido\,si\,sta\,raffreddando\\
-0.4 & se\,il\,fluido\,si\,sta\,riscaldando
-\end{cases}$
-
 
 \subsection{Irraggiamento}
 
@@ -649,7 +531,7 @@ $n=\begin{cases}
 
 \subsubsection{Costanti}
 \begin{description}
-\item [{Costante~di~Stefan-Boltzmann}] $\sigma=5.67\cdot10^{-8\,}[\frac{W}{m^{2}\cdot\text{\textdegree K}}]$;
+\item [{Costante~di~Stefan-Boltzmann}] $\sigma=5.67\cdot10^{-8\,}[\frac{W}{m^{2}\cdot\text{\textdegree\ensuremath{K^{4}}}}]$;
 \item [{Costante~Solare}] $I_{S}=1353\,\frac{W}{m^{2}}$;
 \end{description}
 
@@ -723,8 +605,192 @@ Genericamente vale:
 \item $\dot{Q}_{1,2}=A_{1}F_{12}\sigma_{0}(T_{1}^{4}-T_{2}^{4})$;
 \end{itemize}
 In caso di superfici piane parallele indefinite si ha:
+
+Per una superficie grigia opaca:
 \begin{itemize}
-\item %
+\item $\begin{cases}
+J_{i}=E_{i}+\rho I_{i}=\epsilon_{i}E_{in}+(1-\epsilon_{i})I_{i}; & \epsilon=\alpha,\,\,\,\alpha+\rho=1;\\
+\dot{Q}_{i}=A_{i}(J_{i}-I_{i});
+\end{cases}$
+\end{itemize}
+Per superfici grigie formanti una cavità:
+\begin{itemize}
+\item $\dot{Q}_{1,2}=\frac{\sigma_{0}(T_{1}^{4}-T_{2}^{4})}{\frac{1-\epsilon_{1}}{\epsilon_{1}A_{1}}+\frac{1}{A_{1}F_{12}}+\frac{1-\epsilon_{2}}{\epsilon_{2}A_{2}}}$;
+\end{itemize}
+\clearpage{}
+
+\begin{table}[p]
+
+
+\protect\caption{Gas e calore specifico \label{tab:Specifiche-calore-specifico}}
+
+
+\begin{tabular}{|c|c|c|}
+\hline 
+Tipologia Gas & $c_{v}$ & $c_{p}$\tabularnewline
+\hline 
+\hline 
+Monoatomico & $\frac{3}{2}R^{*}$ & $\frac{5}{2}R^{*}$\tabularnewline
+\hline 
+Biatomico / Politatomico Lineare & $\frac{5}{2}R^{*}$ & $\frac{7}{2}R^{*}$\tabularnewline
+\hline 
+Poliatomico Non Lineare & $\frac{6}{2}R^{*}$ & $\frac{8}{2}R^{*}$\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+\begin{table}[p]
+\protect\caption{Trasformazioni politropiche \label{tab:Trasformazioni-Politropiche}}
+
+
+\begin{tabular}{|c|c|c|c|}
+\hline 
+Trasformazione & $n$=$\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $l$ & $q$\tabularnewline
+\hline 
+\hline 
+Isocora $(V=cost)$ & $n\pm\infty$ & $0$ & $c_{v}\Delta T$\tabularnewline
+\hline 
+Isoterma $(T=cost)$ & $n=1$ & $\begin{cases}
+R^{*}Tln(\frac{V_{2}}{V_{1}})\\
+-R^{*}Tln(\frac{P_{2}}{P_{1}})
+\end{cases}$ & $\begin{cases}
+R^{*}Tln(\frac{V_{2}}{V_{1}})\\
+-R^{*}Tln(\frac{P_{2}}{P_{1}})
+\end{cases}$\tabularnewline
+\hline 
+Isobara $(P=cost)$ & $n=0$ & $P\Delta V$ & $c_{p}\Delta T$\tabularnewline
+\hline 
+Isoentropica / Adiabatica $(ds=0)$ oppure $(Q=0)$ & $n=\frac{c_{p}}{c_{v}}$ & $-c_{v}\Delta T$ & $0$\tabularnewline
+\hline 
+Politropica generica & $\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $(c_{x}-c_{p})\Delta T$ & $c_{x}\Delta T$\tabularnewline
+\hline 
+\end{tabular}
+
+\end{table}
+
+
+\begin{table}[p]
+
+
+\protect\caption{Conduzione - Coordinate cartesiane \label{tab:Conduzione---CoordinateCartesiane}}
+
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Forma & $\Phi$ & $T$ & $\dot{Q}$ & $R_{tot}$\tabularnewline
+\hline 
+\hline 
+Parete piana infinita & $\sigma x-Ak$ & $-\frac{\sigma}{2k}+Ax+B$ & / & /\tabularnewline
+\hline 
+Lastra piana monostrato senza generazione di potenza & $\frac{\Delta T}{R_{TOT}\cdot A}$ & $\frac{T_{2}-T_{1}}{s}x+T_{1}$ & $\frac{\Delta T}{R_{tot}}$ & $(\sum\frac{s_{n}}{k_{n}}+\frac{1}{h_{i}}+\frac{1}{h_{e}})\cdot\frac{1}{A}$\tabularnewline
+\hline 
+\end{tabular}
+
+\end{table}
+
+
+\clearpage{}
+\begin{table}[p]
+
+
+\protect\caption{Conduzione - Coordinate cilindriche \label{tab:Conduzione---CoordinateCilindriche}}
+
+
+\begin{tabular}{|c|c|c|c|c|}
+\hline 
+Tipologia Cilindro & $\Phi$ & $\dot{q}_{per\,unit\grave{a}\,di\,lung}$ & $\dot{Q}$ & $T$\tabularnewline
+\hline 
+\hline 
+Pieno o cavo di altezza infinita & / & / & / & $-\frac{\sigma}{4k}r^{2}+Aln(r)+C$\tabularnewline
+\hline 
+Indefinito con generazione di potenza & $\frac{\sigma}{2}r-\frac{k}{r}C$ & / & / & $-\frac{\sigma}{4k}r^{2}+Cln(r)+D$\tabularnewline
+\hline 
+Pieno con generazione di potenza & $\frac{\sigma}{2}r$ & $\pi r^{2}\sigma$ & $V\sigma$ & $\frac{\sigma}{4k}(R^{2}-r^{2})+T_{2}$\tabularnewline
+\hline 
+Cavo senza generazione di potenza & $k\frac{(T_{i}-T_{e})}{ln(\frac{R_{e}}{R_{i}})}\cdot\frac{1}{r}$ & $\frac{2\pi k}{ln(\frac{R_{e}}{R_{i}})}\cdot(T_{i}-T_{e})$ & $k\frac{T_{i}-T_{e}}{ln(\frac{R_{e}}{R_{i}})}\cdot2\pi L$ & $T_{i}+\frac{T_{e}-R_{i}}{ln(\frac{R_{e}}{R_{i}})}\cdot ln(\frac{r}{R_{i}})$\tabularnewline
+\hline 
+\end{tabular}
+
+\end{table}
+
+
+\begin{table}[p]
+
+
+\protect\caption{Conduzione - Coordinate sferiche \label{tab:Conduzione---CoordinateSferiche}}
+
+
+\begin{tabular}{|c|c|}
+\hline 
+Forma Sfera & $T$\tabularnewline
+\hline 
+\hline 
+Piena o cava & $-\frac{\sigma}{6k}r^{2}+\frac{A}{r}+B$\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+\begin{table}[p]
+
+
+\protect\caption{Convezione - Costanti adimensionali \label{tab:Convezione---Costanti}}
+
+
+Ove presenti, se $Re>Re_{CRIT}$, $Pr_{MIN}<Pr<Pr_{MAX}$, $Ra>Ra_{CRIT}$
+il moto è turbolento.
+
+\begin{tabular}{|c|c|c|c|c|c|c|}
+\hline 
+Forma & $Nu$ con moto laminare & $Nu$ con moto turbolento & $Re_{CRIT}$ & \multicolumn{2}{c|}{$Pr_{CRIT}$} & $Ra_{CRIT}$\tabularnewline
+\hline 
+\multirow{2}{*}{Attorno ad un cilindro} & $\begin{cases}
+3.66 & se\,T_{parete}=cost\\
+4.36 & se\,h(T_{parete}-T_{\infty})=cost
+\end{cases}$ & / & $2\cdot10^{5}$ & \multicolumn{2}{c|}{/} & /\tabularnewline
+\cline{2-7} 
+ & \multicolumn{2}{c|}{$C\cdot Re^{m}\cdot Pr^{\frac{1}{3}}$} & / & \multicolumn{2}{c|}{/} & /\tabularnewline
+\hline 
+\multirow{2}{*}{In un condotto circolare} & / & $0.023\cdot Re^{0.8}\cdot Pr^{n}$\footnote{$n=\begin{cases}
+0.3 & se\,il\,fluido\,si\,sta\,raffreddando\\
+0.4 & se\,il\,fluido\,si\,sta\,riscaldando
+\end{cases}$} & $10^{4}$ & $0,7$ & $160$ & /\tabularnewline
+\cline{2-7} 
+ & / & $0.027\cdot Re^{0.8}\cdot Pr^{0.333}\cdot(\frac{\mu}{\mu_{P}})^{0.14}$ & $10^{4}$ & $0,7$ & $16700$ & /\tabularnewline
+\hline 
+Parete piana verticale & $0.59\cdot Ra^{0.25}$ & $0.10\cdot Ra^{0.33}$ & / & / & / & $10^{9}$\tabularnewline
+\hline 
+Lungo una lastra piana & $0,664\cdot Re^{\frac{1}{2}}\cdot Pr^{\frac{1}{3}}$ sse $Pr\geq0,6$ & $0,037\cdot Re^{\frac{4}{5}}\cdot Pr^{\frac{1}{3}}$ sse $0,6\leq Pr\leq60$
+e $5\cdot10^{5}\leq Re\leq10^{7}$ & $5\cdot10^{5}$ & / & / & /\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+\clearpage{}
+\begin{table}[p]
+
+
+\protect\caption{Convezione - Condizioni di regime \label{tab:Convezione---Condizioni}}
+
+
+\begin{tabular}{|c|c|c|}
+\hline 
+Tipo di moto & Condizione di regime laminare & Condizione di regime turbolento\tabularnewline
+\hline 
+\hline 
+In un condotto & $Re<2000$ & $Re>2500$\tabularnewline
+\hline 
+Lungo una lastra piana & $Re<5\cdot10^{5}$ & $Re>5\cdot10^{5}$\tabularnewline
+\hline 
+Attorno ad un cilindro & $Re<2\cdot10^{5}$ & $Re>2\cdot10^{5}$\tabularnewline
+\hline 
+\end{tabular}
+
+\end{table}
+\begin{table}[p]
+\protect\caption{Irragiamento - Calore\label{tab:Irragiamento}}
+
+
 \begin{tabular}{|c|c|c|c|}
 \hline 
 Tipologia & Superficie 1 & Superficie 2 & $q_{1,2}$\tabularnewline
@@ -737,16 +803,7 @@ Nera - Grigia & Nera & Grigia & $\epsilon_{2}\sigma_{0}(T_{1}^{4}-T_{2}^{4})$\ta
 Grigia - Grigia & Grigia & Grigia & $\frac{\sigma_{0}(T_{1}^{4}-T_{2}^{4})}{\frac{1}{\epsilon_{1}}+\frac{1}{\epsilon_{2}}-1}$\tabularnewline
 \hline 
 \end{tabular}
-\end{itemize}
-Per una superficie grigia opaca:
-\begin{itemize}
-\item $\begin{cases}
-J_{i}=E_{i}+\rho I_{i}=\epsilon_{i}E_{in}+(1-\epsilon_{i})I_{i}; & \epsilon=\alpha,\,\,\,\alpha+\rho=1;\\
-\dot{Q}_{i}=A_{i}(J_{i}-I_{i});
-\end{cases}$
-\end{itemize}
-Per superfici grigie formanti una cavità:
-\begin{itemize}
-\item $\dot{Q}_{1,2}=\frac{\sigma_{0}(T_{1}^{4}-T_{2}^{4})}{\frac{1-\epsilon_{1}}{\epsilon_{1}A_{1}}+\frac{1}{A_{1}F_{12}}+\frac{1-\epsilon_{2}}{\epsilon_{2}A_{2}}}$;\end{itemize}
+
+\end{table}
 
 \end{document}
