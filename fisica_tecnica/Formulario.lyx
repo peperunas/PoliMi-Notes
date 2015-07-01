@@ -2153,10 +2153,17 @@ Generale
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $R_{IRR}=\varepsilon\sigma(T_{supp}^{2}+T_{amb}^{2})(T_{supp}+T_{amb})=\frac{1}{h_{irr}\cdot A}$
+\begin_inset Formula $h_{IRR}=\varepsilon\sigma(T_{supp}^{2}+T_{amb}^{2})(T_{supp}+T_{amb});$
 \end_inset
 
 
+\end_layout
+
+\begin_layout Itemize
+\begin_inset Formula $R_{IRR}=\frac{1}{h_{irr}\cdot A}$
+\end_inset
+
+;
 \end_layout
 
 \begin_layout Subsubsection
