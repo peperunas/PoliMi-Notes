@@ -5,7 +5,7 @@
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
 \usepackage[landscape]{geometry}
-\geometry{verbose,tmargin=0.5cm,bmargin=0.5cm,lmargin=0.5cm,rmargin=0.5cm}
+\geometry{verbose,tmargin=1cm,bmargin=1.5cm,lmargin=1cm,rmargin=1cm}
 \usepackage{array}
 \usepackage{textcomp}
 \usepackage{multirow}
@@ -37,6 +37,8 @@
 
 \maketitle
 \tableofcontents{}
+
+\newpage{}
 
 \listoftables
 
@@ -160,8 +162,8 @@ Inoltre, il $I$ principio della termodinamica impone che
 \begin{itemize}
 \item $c_{H_{2}0}=4186\frac{J}{kg\cdot\text{\textdegree K}};$
 \item $c=c_{v}=c_{p};$
-\item $du=\delta q=cdT;$
-\item $ds=c\frac{dT}{T}$;
+\item $du=\delta q=cdT\Rightarrow\Delta u=c\Delta T;$
+\item $ds=c\frac{dT}{T}\Rightarrow\Delta s=cln(\frac{T_{2}}{T_{1}})$;
 \item $v=cost$;
 \item $\Delta h=c\Delta T+v\Delta P;$
 \end{itemize}
@@ -193,8 +195,7 @@ v_{lv}=v_{v}-v_{l}
 \mbox{\ensuremath{v=v_{l}+xv_{lv};}}\\
 \mbox{\ensuremath{h=h_{l}+xh_{lv};}}\\
 \mbox{\ensuremath{s=s_{l}+xs_{lv};}}\\
-\mbox{\ensuremath{u=u_{l}+xu_{lv};}}\\
-\\
+\mbox{\ensuremath{u=u_{l}+xu_{lv};}}
 \end{cases}\mbox{}$
 \item $dh=d\overleftarrow{q};$
 \end{itemize}
@@ -344,15 +345,15 @@ T_{1}T_{3}=T_{2}T_{4}
 
 
 
-\subsection{Carnot}
+\subsection{Cicli a Gas}
 
 
-\subsubsection{Generale}
+\subsubsection{Sistemi chiusi}
 \begin{itemize}
-\item $\eta_{rev}=1-\frac{T_{1}}{T_{3}}$;
+\item $\Delta u=\overleftarrow{q}-\overrightarrow{l};$
 \end{itemize}
 
-\subsubsection{Carnot a Gas}
+\paragraph{Carnot a Gas}
 
 Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
 
@@ -360,19 +361,42 @@ Il ciclo di Carnot è costituito da due isoentropiche e due isoterme.
 \begin{itemize}
 \item $S_{irr}=-\frac{\overleftarrow{Q}}{T_{C}}+\frac{\overrightarrow{Q}}{T_{F}}$;
 \item $\varDelta S=\frac{\overleftarrow{Q}}{T_{2}}=\frac{\overrightarrow{Q}}{T_{1}}$;
+\item $\eta_{rev}=1-\frac{T_{1}}{T_{3}}$;
 \end{itemize}
 
-\subsubsection{Carnot a Vapore}
+\paragraph{Diesel}
 
-\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVapore}\includegraphics[width=0.33\linewidth,height=0.25\paperheight]{Formulario/CarnotVaporePV}\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVaporeTS}
+Il ciclo Diesel è costituito da due isoentropiche, una isocora ed
+una isobara.
 
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/Diesel}
+\begin{itemize}
+\item $\eta_{D}=1-\frac{c_{v}T_{1}(\frac{T_{4}}{T_{1}}-1)}{c_{p}T_{2}(\frac{T_{3}}{T_{2}}-1)}$;
+\item $\eta=1-\frac{T_{4}-T_{1}}{n(T_{3}-T_{2})}$;
+\item $\eta=1-\frac{1}{r^{n-1}}\cdot[\frac{z^{n}-1}{n(z-1)}]$;
+\item $r=\frac{V_{1}}{V_{2}}$, rapporto di compressione volumetrico;
+\item $z=\frac{V_{3}}{V_{2}}$, rapporto di combustione;
+\end{itemize}
 
-\subsubsection{Carnot inverso a vapore}
+\paragraph{Otto}
 
-\includegraphics[height=0.25\paperheight]{Formulario/CarnotVaporeInverso}
+Ciclo simmetrico costituito da due isoentropiche e due isocore.
 
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoPV.PNG}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoTS.PNG}
+\begin{itemize}
+\item $\overleftarrow{Q}=u_{3}-u_{2}=c_{v}(T_{3}-T_{2})$;
+\item $\overrightarrow{Q}=u_{4}-u_{1}=c_{v}(T_{4}-T_{1})$;
+\item $l=c_{v}(T_{3}-T_{4})-c_{v}(T_{2}-T_{1})=c_{v}T_{3}(1-\frac{1}{r_{vol}^{n-1}})-c_{v}T_{1}(r_{vol}^{n-1}-1)=c_{v}T_{3}(1-\frac{T_{4}}{T_{3}})-c_{v}T_{1}(\frac{T_{2}}{T_{1}}-1)$;
+\item $\eta=1-\frac{T_{1}}{T_{2}}=1-r_{vol}^{1-n};$
+\item $r_{vol}=\frac{V_{1}}{V_{2}}$;
+\end{itemize}
 
-\subsection{Joule-Brayton}
+\subsubsection{Sistemi aperti}
+\begin{itemize}
+\item $\Delta h=\overleftarrow{q}-\overrightarrow{l};$
+\end{itemize}
+
+\paragraph{Joule-Brayton}
 
 Il ciclo Joule-Brayton è un ciclo simmetrico ed un sistema aperto
 costituito da due isoentropiche e due isobare.
@@ -391,39 +415,24 @@ Affinché si possa operare una rigenerazione bisogna che la temperatura
 di fine espansione sia maggiore della temperatura di fine compressione.
 
 
-\subsection{Diesel}
+\subsection{Cicli a Vapore}
 
-Il ciclo Diesel è costituito da due isoentropiche, una isocora ed
-una isobara.
 
-\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/Diesel}
+\subsubsection{Generale}
 \begin{itemize}
-\item $\eta_{D}=1-\frac{c_{v}T_{1}(\frac{T_{4}}{T_{1}}-1)}{c_{p}T_{2}(\frac{T_{3}}{T_{2}}-1)}$;
-\item $\eta=1-\frac{T_{4}-T_{1}}{n(T_{3}-T_{2})}$;
-\item $\eta=1-\frac{1}{r^{n-1}}\cdot[\frac{z^{n}-1}{n(z-1)}]$;
-\item $r=\frac{V_{1}}{V_{2}}$, rapporto di compressione volumetrico;
-\item $z=\frac{V_{3}}{V_{2}}$, rapporto di combustione;
+\item $\Delta h=\overleftarrow{q}-\overrightarrow{l};$
 \end{itemize}
 
-\subsection{Otto}
-
-Ciclo simmetrico costituito da due isoentropiche e due isocore.
-
-\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoPV.PNG}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoTS.PNG}
-\begin{itemize}
-\item $\overleftarrow{Q}=u_{3}-u_{2}=c_{v}(T_{3}-T_{2})$;
-\item $\overrightarrow{Q}=u_{4}-u_{1}=c_{v}(T_{4}-T_{1})$;
-\item $l=c_{v}(T_{3}-T_{4})-c_{v}(T_{2}-T_{1})=c_{v}T_{3}(1-\frac{1}{r_{vol}^{n-1}})-c_{v}T_{1}(r_{vol}^{n-1}-1)=c_{v}T_{3}(1-\frac{T_{4}}{T_{3}})-c_{v}T_{1}(\frac{T_{2}}{T_{1}}-1)$;
-\item $\eta=1-\frac{T_{1}}{T_{2}}=1-r_{vol}^{1-n};$
-\item $r_{vol}=\frac{V_{1}}{V_{2}}$;
-\end{itemize}
-
-\subsection{Rankine}
+\subsubsection{Cicli diretti}
 
 
-\subsubsection{Rankine Semplice}
+\paragraph{Carnot\protect \\
+}
 
-\includegraphics[height=0.25\paperheight]{Formulario/6894054_orig}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/RankineComp}
+\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVapore}\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVaporePV}\includegraphics[width=0.33\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVaporeTS}
+
+
+\paragraph{Rankine Semplice}
 
 L'acqua entra nella pompa $(1)$ come liquido saturo. Entra in caldaia,
 a $P=cost$, $(2)$ come liquido sottoraffreddato ed esce come vapore
@@ -438,10 +447,10 @@ $(4)$ e viene condensato a $P=cost$ uscendo come liquido saturo.
 \item $(3)\rightarrow(4)\,\,\,\Delta S=0$;
 \item $(4)\rightarrow(1)\,\,\,P=cost,\,T=cost$;
 \end{itemize}
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/6894054_orig}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/RankineComp}
 
-\subsubsection{Rankine con surriscaldamento}
 
-\includegraphics[height=0.25\paperheight]{Formulario/RankineSurriscaldamento}
+\paragraph{Rankine con surriscaldamento}
 
 In aggiunta alle fasi di un ciclo Rankine semplice si ha un'espansione
 isoentropica in una turbina ad alta pressione $(3\rightarrow4)$,
@@ -455,10 +464,22 @@ in una turbina a bassa pressione $(5\rightarrow6)$:
 \item $(5)\rightarrow(6)\,\,\,\Delta S=0$;
 \item $(6)\rightarrow(1)\,\,\,P=cost,\,T=cost$;
 \end{itemize}
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/RankineSurriscaldamento}
 
-\subsubsection{Rankine Inverso}
 
-\includegraphics[width=0.5\linewidth,height=0.35\paperheight]{Formulario/RankineInverso}
+\subsubsection{Cicli indiretti}
+
+
+\paragraph{Carnot inverso\protect \\
+}
+
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/CarnotVaporeInverso}
+
+
+\paragraph{Ciclo inverso a compressione di vapore ideale\protect \\
+}
+
+\includegraphics[width=0.5\linewidth,height=0.35\paperheight,keepaspectratio]{Formulario/RankineInverso}
 
 
 \section{Trasmissione del Calore}
@@ -539,10 +560,11 @@ e $T_{f}=$ temperatura del fluido;
 \begin{itemize}
 \item $\dot{Q}_{IRR}=\varepsilon\sigma A(T_{s})^{4}$ con $\varepsilon=$
 emissività $(0\leq\varepsilon\leq1)$;
-\item $E_{n}=\epsilon\sigma T^{4}$, potere emissivo di un corpo alla temperatura
-$T$;
+\item $E_{n}=\varepsilon\sigma T^{4}$, potere emissivo di un corpo alla
+temperatura $T$;
 \item $(\lambda\cdot T)_{max\,potenza}=2897,8\,[\mu m\cdot\text{\textdegree K]}$;
 \item $\varepsilon(T)=\frac{E(T)}{E_{n}(T)}=\frac{E(T)}{\sigma T^{4}}$;
+\item $R_{IRR}=\varepsilon\sigma(T_{supp}^{2}+T_{amb}^{2})(T_{supp}+T_{amb})=\frac{1}{h_{irr}\cdot A}$
 \end{itemize}
 
 \subsubsection{Il fattore di vista}
@@ -644,12 +666,12 @@ Poliatomico Non Lineare & $\frac{6}{2}R^{*}$ & $\frac{8}{2}R^{*}$\tabularnewline
 \protect\caption{Trasformazioni politropiche \label{tab:Trasformazioni-Politropiche}}
 
 
-\begin{tabular}{|c|c|c|c|}
+\begin{tabular}{|c|c|c|c|c|c|c|}
 \hline 
-Trasformazione & $n$=$\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $l$ & $q$\tabularnewline
+Trasformazione & $n$=$\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $l$ & $q$ & $\Delta u$ & $\Delta s$ & $\Delta h$\tabularnewline
 \hline 
 \hline 
-Isocora $(V=cost)$ & $n\pm\infty$ & $0$ & $c_{v}\Delta T$\tabularnewline
+Isocora $(V=cost)$ & $n\pm\infty$ & $0$ & $c_{v}\Delta T$ & $c_{v}\Delta T$ & $c_{v}ln(\frac{T_{2}}{T_{1}})$ & $c_{p}\Delta T$\tabularnewline
 \hline 
 Isoterma $(T=cost)$ & $n=1$ & $\begin{cases}
 R^{*}Tln(\frac{V_{2}}{V_{1}})\\
@@ -657,16 +679,21 @@ R^{*}Tln(\frac{V_{2}}{V_{1}})\\
 \end{cases}$ & $\begin{cases}
 R^{*}Tln(\frac{V_{2}}{V_{1}})\\
 -R^{*}Tln(\frac{P_{2}}{P_{1}})
+\end{cases}$ & - & - & $\begin{cases}
+R^{*}ln(\frac{V_{2}}{V_{1}})\\
+-R^{*}ln(\frac{P_{2}}{P_{1}})
 \end{cases}$\tabularnewline
 \hline 
-Isobara $(P=cost)$ & $n=0$ & $P\Delta V$ & $c_{p}\Delta T$\tabularnewline
+Isobara $(P=cost)$ & $n=0$ & $P\Delta V$ & $c_{p}\Delta T$ & $c_{v}\Delta T$ & $c_{p}ln(\frac{T_{2}}{T_{1}})$ & $c_{p}\Delta T$\tabularnewline
 \hline 
-Isoentropica / Adiabatica $(ds=0)$ oppure $(Q=0)$ & $n=\frac{c_{p}}{c_{v}}$ & $-c_{v}\Delta T$ & $0$\tabularnewline
+Isoentropica / Adiabatica $(ds=0)$ oppure $(Q=0)$ & $n=\frac{c_{p}}{c_{v}}$ & $-c_{v}\Delta T$ & $0$ & $c_{v}\Delta T$ & - & $c_{p}\Delta T$\tabularnewline
 \hline 
-Politropica generica & $\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $(c_{x}-c_{p})\Delta T$ & $c_{x}\Delta T$\tabularnewline
+Politropica generica & $\frac{c_{x}-c_{p}}{c_{x}-c_{v}}$ & $(c_{x}-c_{p})\Delta T$ & $c_{x}\Delta T$ & $c_{v}\Delta T$ & $\begin{cases}
+c_{v}ln(\frac{T_{2}}{T_{1}})+R^{*}ln(\frac{V_{2}}{V_{1}})\\
+c_{p}ln(\frac{T_{2}}{T_{1}})-R^{*}ln(\frac{P_{2}}{P_{1}})
+\end{cases}$ & $c_{p}\Delta T$\tabularnewline
 \hline 
 \end{tabular}
-
 \end{table}
 
 
@@ -721,12 +748,12 @@ Cavo senza generazione di potenza & $k\frac{(T_{i}-T_{e})}{ln(\frac{R_{e}}{R_{i}
 \protect\caption{Conduzione - Coordinate sferiche \label{tab:Conduzione---CoordinateSferiche}}
 
 
-\begin{tabular}{|c|c|}
+\begin{tabular}{|c|c|c|c|}
 \hline 
-Forma Sfera & $T$\tabularnewline
+Forma Sfera & $T$ & $R$ & $Superficie$\tabularnewline
 \hline 
 \hline 
-Piena o cava & $-\frac{\sigma}{6k}r^{2}+\frac{A}{r}+B$\tabularnewline
+Piena o cava & $-\frac{\sigma}{6k}r^{2}+\frac{A}{r}+B$ & $\frac{r_{2}-r_{1}}{4\pi r_{1}r_{2}k}$ & $4\pi r^{2}$\tabularnewline
 \hline 
 \end{tabular}
 \end{table}

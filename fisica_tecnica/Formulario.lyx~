@@ -678,14 +678,14 @@ Liquidi
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $du=\delta q=cdT\Rightarrow\Delta u=c\Delta T;$
+\begin_inset Formula $du=\delta q=cdT;$
 \end_inset
 
 
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $ds=c\frac{dT}{T}\Rightarrow\Delta s=cln(\frac{T_{2}}{T_{1}})$
+\begin_inset Formula $ds=c\frac{dT}{T}$
 \end_inset
 
 ;
