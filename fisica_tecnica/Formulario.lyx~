@@ -2216,10 +2216,10 @@ Generale
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $h_{IRR}=\varepsilon\sigma(T_{sup}^{2}+T_{amb}^{2})(T_{sup}+T_{amb})$
+\begin_inset Formula $h_{IRR}=\varepsilon\sigma(T_{sup}^{2}+T_{amb}^{2})(T_{sup}+T_{amb});$
 \end_inset
 
-, coefficiente di scambio termico per irraggiamento;
+
 \end_layout
 
 \begin_layout Itemize
