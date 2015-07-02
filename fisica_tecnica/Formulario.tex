@@ -251,7 +251,7 @@ energia potenziale e cinetica tra le sezioni di ingresso e di uscita.
 \item $\overleftarrow{\dot{Q}}=\overrightarrow{\dot{Q}}$
 \end{itemize}
 
-\subsubsection{Diffusore ($w\downarrow)$ e Ugello ($w\uparrow$)}
+\subsubsection{Diffusore ($w$ decrescente ) e Ugello ($w$ crescente)}
 
 I diffusori e gli ugelli sono sistemi aperti stazionari che operano
 senza scambio di lavoro né calore per i quali si ipotizzano trascurabili
@@ -526,10 +526,28 @@ e $T_{f}=$ temperatura del fluido;
 
 \subsubsection{Convezione Forzata}
 \begin{itemize}
+\item $D=\frac{4*areaSezioneNormale}{perimetroBagnato}$
+
+\begin{itemize}
+\item $D_{tubiCircolari}=D$
+\item $D_{anelliCircolari}=D_{2}-D_{1}$(con $D_{1}$diametro interno e
+l'altro quello esterno)
+\end{itemize}
 \item $Nu=$$\frac{hD}{k}$, numero di Nusselt;
 \item $Re=\frac{\rho wD}{\mu}$, numero di Reynolds; 
 \item $Pr=\frac{c_{p}\mu}{k}$, numero di Prandtl, indipendente dalla pressione;
 \item $Pe=Re\cdot Pr=\frac{wD}{a}$, numero di Peclet;
+\end{itemize}
+
+\subsubsection*{Pompaggio}
+\begin{itemize}
+\item $P_{pompaggio}=\dot{m}\frac{1}{\rho}\Delta P$
+\item $\Delta P=\frac{fL\rho\omega^{2}}{2d}$, perdita di carico;
+\item $\begin{cases}
+f=0.184Re^{-0.2} & moto\,turbolento\\
+f=\frac{64}{Re} & moto\,laminare
+\end{cases}$
+\item $\dot{L}=\dot{V}\Delta P=\frac{\dot{m}}{\rho}\Delta P$;
 \end{itemize}
 
 \subsubsection{Convezione Naturale}
@@ -564,7 +582,7 @@ emissività $(0\leq\varepsilon\leq1)$;
 temperatura $T$;
 \item $(\lambda\cdot T)_{max\,potenza}=2897,8\,[\mu m\cdot\text{\textdegree K]}$;
 \item $\varepsilon(T)=\frac{E(T)}{E_{n}(T)}=\frac{E(T)}{\sigma T^{4}}$;
-\item $h_{IRR}=\varepsilon\sigma(T_{supp}^{2}+T_{amb}^{2})(T_{supp}+T_{amb});$
+\item $h_{IRR}=\varepsilon\sigma(T_{sup}^{2}+T_{amb}^{2})(T_{sup}+T_{amb});$
 \item $R_{IRR}=\frac{1}{h_{irr}\cdot A}$;
 \end{itemize}
 
@@ -780,12 +798,12 @@ Forma & $Nu$ con moto laminare & $Nu$ con moto turbolento & $Re_{CRIT}$ & \multi
 \cline{2-7} 
  & \multicolumn{2}{c|}{$C\cdot Re^{m}\cdot Pr^{\frac{1}{3}}$} & / & \multicolumn{2}{c|}{/} & /\tabularnewline
 \hline 
-\multirow{2}{*}{In un condotto circolare} & / & $0.023\cdot Re^{0.8}\cdot Pr^{n}$\footnote{$n=\begin{cases}
+\multirow{2}{*}{In un condotto circolare} & $3.66$ & $0.023\cdot Re^{0.8}\cdot Pr^{n}$\footnote{$n=\begin{cases}
 0.3 & se\,il\,fluido\,si\,sta\,raffreddando\\
 0.4 & se\,il\,fluido\,si\,sta\,riscaldando
 \end{cases}$} & $10^{4}$ & $0,7$ & $160$ & /\tabularnewline
 \cline{2-7} 
- & / & $0.027\cdot Re^{0.8}\cdot Pr^{0.333}\cdot(\frac{\mu}{\mu_{P}})^{0.14}$ & $10^{4}$ & $0,7$ & $16700$ & /\tabularnewline
+ & $3.66$ & $0.027\cdot Re^{0.8}\cdot Pr^{0.333}\cdot(\frac{\mu}{\mu_{P}})^{0.14}$ & $10^{4}$ & $0,7$ & $16700$ & /\tabularnewline
 \hline 
 Parete piana verticale & $0.59\cdot Ra^{0.25}$ & $0.10\cdot Ra^{0.33}$ & / & / & / & $10^{9}$\tabularnewline
 \hline 
