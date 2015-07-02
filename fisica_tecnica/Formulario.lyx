@@ -5,6 +5,7 @@
 \textclass article
 \begin_preamble
 \renewcommand{\arraystretch}{2}
+\date{Un ringraziamento speciale a Michele Albanese}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -3533,9 +3534,8 @@ name "tab:Conduzione---CoordinateCilindriche"
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="5" columns="5">
+<lyxtabular version="3" rows="5" columns="4">
 <features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3574,23 +3574,11 @@ Tipologia Cilindro
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $\dot{Q}$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $T$
+\begin_inset Formula $\dot{Q}$
 \end_inset
 
 
@@ -3627,23 +3615,11 @@ Pieno o cavo di altezza infinita
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-/
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-\frac{\sigma}{4k}r^{2}+Aln(r)+C$
-\end_inset
-
-
+/
 \end_layout
 
 \end_inset
@@ -3680,23 +3656,11 @@ Indefinito con generazione di potenza
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-/
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $-\frac{\sigma}{4k}r^{2}+Cln(r)+D$
-\end_inset
-
-
+/
 \end_layout
 
 \end_inset
@@ -3736,23 +3700,11 @@ Pieno con generazione di potenza
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $V\sigma$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\frac{\sigma}{4k}(R^{2}-r^{2})+T_{2}$
+\begin_inset Formula $V\sigma$
 \end_inset
 
 
@@ -3795,23 +3747,11 @@ Cavo senza generazione di potenza
 
 \end_inset
 </cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $k\frac{T_{i}-T_{e}}{ln(\frac{R_{e}}{R_{i}})}\cdot2\pi L$
-\end_inset
-
-
-\end_layout
-
-\end_inset
-</cell>
 <cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" rightline="true" usebox="none">
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $T_{i}+\frac{T_{e}-R_{i}}{ln(\frac{R_{e}}{R_{i}})}\cdot ln(\frac{r}{R_{i}})$
+\begin_inset Formula $k\frac{T_{i}-T_{e}}{ln(\frac{R_{e}}{R_{i}})}\cdot2\pi L$
 \end_inset
 
 
@@ -3867,9 +3807,8 @@ name "tab:Conduzione---CoordinateSferiche"
 
 \begin_layout Plain Layout
 \begin_inset Tabular
-<lyxtabular version="3" rows="2" columns="4">
+<lyxtabular version="3" rows="2" columns="3">
 <features rotate="0" tabularvalignment="middle">
-<column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
 <column alignment="center" valignment="top">
@@ -3879,18 +3818,6 @@ name "tab:Conduzione---CoordinateSferiche"
 
 \begin_layout Plain Layout
 Forma Sfera
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $T$
-\end_inset
-
-
 \end_layout
 
 \end_inset
@@ -3926,18 +3853,6 @@ Forma Sfera
 
 \begin_layout Plain Layout
 Piena o cava
-\end_layout
-
-\end_inset
-</cell>
-<cell alignment="center" valignment="top" topline="true" bottomline="true" leftline="true" usebox="none">
-\begin_inset Text
-
-\begin_layout Plain Layout
-\begin_inset Formula $-\frac{\sigma}{6k}r^{2}+\frac{A}{r}+B$
-\end_inset
-
-
 \end_layout
 
 \end_inset

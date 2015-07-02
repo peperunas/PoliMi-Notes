@@ -5,6 +5,7 @@
 \textclass article
 \begin_preamble
 \renewcommand{\arraystretch}{2}
+\date{Un ringraziamento speciale a Michele Albanese}
 \end_preamble
 \use_default_options true
 \begin_modules
@@ -2053,6 +2054,13 @@ f=\frac{64}{Re} & moto\,laminare
 
 \end_layout
 
+\begin_layout Itemize
+\begin_inset Formula $\dot{L}=\dot{V}\Delta P=\frac{\dot{m}}{\rho}\Delta P$
+\end_inset
+
+;
+\end_layout
+
 \begin_layout Subsubsection
 Convezione Naturale
 \end_layout
@@ -2208,7 +2216,7 @@ Generale
 \end_layout
 
 \begin_layout Itemize
-\begin_inset Formula $h_{IRR}=\varepsilon\sigma(T_{supp}^{2}+T_{amb}^{2})(T_{supp}+T_{amb});$
+\begin_inset Formula $h_{IRR}=\varepsilon\sigma(T_{sup}^{2}+T_{amb}^{2})(T_{sup}+T_{amb});$
 \end_inset
 
 
