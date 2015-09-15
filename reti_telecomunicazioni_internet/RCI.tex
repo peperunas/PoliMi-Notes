@@ -1,0 +1,231 @@
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
+%% Do not edit unless you really know what you are doing.
+\documentclass[english]{article}
+\usepackage[T1]{fontenc}
+\usepackage[latin9]{inputenc}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+\makeatletter
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% LyX specific LaTeX commands.
+%% Because html converters don't know tabularnewline
+\providecommand{\tabularnewline}{\\}
+
+\makeatother
+
+\usepackage{babel}
+\begin{document}
+
+\title{Reti di Telecomunicazione ed Internet}
+
+
+\author{Giulio De Pasquale}
+
+\maketitle
+
+\section{Legenda}
+\begin{description}
+\item [{Tempo~di~trasmissione}] $T\,[ms];$
+\item [{Tempo~di~propagazione}] $\tau\,[ms];$
+\item [{Finestra~di~pacchetti}] $W\,[pkts];$
+\item [{Probabilità~di~successo~di~trasmissione}] $P\,(0\leq P\leq1);$
+\item [{Capacità~trasmissiva~di~un~canale}] $C\,[\frac{bit}{s}]$;
+\item [{Grandezza~di~un~pacchetto}] $p\,[bit];$
+\item [{Sequence~Number}] $SN;$
+\item [{Request~Number}] $RN$;
+\end{description}
+
+\section{Data Link Layer}
+
+
+\subsection{Controllo d'errore}
+
+
+\subsubsection{Stop and Wait}
+
+Il mittente invia un messaggio e attende dal destinatario una conferma
+positiva (ACK), negativa (NACK) o un comando; se scade il time-out
+per uno di questi tre, il mittente provvederà a rispedire il pacchetto
+e il destinatario si incaricherà di scartare eventuali repliche. Nel
+caso in cui si verificasse un errore nella trasmissione del segnale
+di conferma, il mittente provvederà a rinviare il pacchetto; il destinatario
+riceverà in questo modo una copia del pacchetto già ricevuto, credendo
+che gli sia pervenuto un nuovo pacchetto. Per ovviare a questo problema
+si può procedere numerando i pacchetti trasmessi, ovvero inserendo
+un bit di conteggio.
+\begin{description}
+\item [{Efficienza}] $\eta=\frac{T}{T+2\tau}$;
+\end{description}
+
+\subsubsection{Go-Back-N}
+
+Il mittente dispone di un buffer dove immagazzina $W$ pacchetti da
+spedire, man mano che riceve la conferma ACK svuota il buffer e lo
+riempie con nuovi pacchetti; nell'eventualità di pacchetti persi o
+danneggiati e scartati avviene il reinvio del blocco di pacchetti
+interessati. I pacchetti ricevuti dal destinatario dopo quello scartato
+vengono eliminati.
+\begin{description}
+\item [{Finestra~minima}] $W\geq1+\frac{2T}{\tau};$
+\item [{Tempo~di~trasmissione}] $T=\frac{2\tau}{W-1};$
+\item [{Efficienza~(con~errori)}] $\frac{P}{(1-P)(1+\frac{2\tau}{T})+P};$
+\end{description}
+
+\subsubsection{Selective Repeat}
+
+Il mittente reinvia i pacchetti oltre il timeout ed un numero di frame
+specificato dalla grandezza della finestra anche senza attendere l'arrivo
+di ACK individuali da parte del ricevitore; egli può rifiutare un
+pacchetto singolarmente che può essere ritrasmesso indipendentemente
+ed inoltre accetta pacchetti non ordinati inserendoli in un buffer.
+
+
+\subsection{HDLC}
+
+Si tratta di un protocollo a riempimento di bit e usa la tecnica del
+bit stuffing per evitare che le sequenze di terminazione compaiano
+all'interno dei frame.
+
+I frame dati HDLC possono essere trasmessi attraverso collegamenti
+sincroni o asincroni. In essi però non esiste alcuna delimitazione,
+quindi, per ognuno di essi, viene usato una flag / delimitatore ($'01111110'$,
+in esadecimale '$0x7E$') che non potrà mai apparire nel resto del
+frame. Quando non sta venendo trasmesso nessun frame, il canale viene
+occupato da sole flag.
+
+Il Frame Check Sequence (FCS) è un CRC-CCITT 16 bit oppure CRC-32
+a 32 bit calcolato sui campi Indirizzo, Controllo e Dati. Se i pacchetti
+hanno un FCS integro, viene spedito un pacchetto di conferma (ACK)
+a chi aveva trasmesso in modo da permettergli di spedire il prossimo
+frame. Altrimenti il ricevente manda una conferma negativa (NACK)
+o, più semplicemente, scarta il frame. Se manda il NACK ed esso arriva
+a chi aveva trasmesso, può essere spedito un altro frame.
+
+
+\subsubsection{Tipi di stazioni e trasmissione dati}
+
+I tipi di stazioni sono 3:
+\begin{itemize}
+\item Terminale \emph{primario}: è responsabile delle operazioni di controllo
+sul collegamento. Manda i frame di controllo (comandi). 
+\item Terminale \emph{secondario}: lavora sotto il controllo di quello primario.
+Spedisce solo pacchetti di risposta. Il primario è collegato ai secondari
+attraverso collegamenti logici multipli. 
+\item Terminale \emph{combinato}: ha le caratteristiche di entrambi i terminali
+sopra. Spedisce sia comandi sia risposte. 
+\end{itemize}
+I dati invece, possono essere trasmessi nelle seguenti modalità:
+\begin{itemize}
+\item \emph{NRM (Normal Response Mode)}: in cui un terminale primario inizia
+a trasmettere e il secondario risponde se interpellato. Questo permette
+la comunicazione su canali half-duplex.
+\item \emph{ARM (Asynchronous Response Mode)}: aggiunto successivamente
+per permettere l'utilizzo su canali full-duplex è fondamentalmente
+come l'NRM, con la differenza che un terminale secondario può trasmettere
+anche senza l'autorizzazione di un terminale primario.
+\item \emph{ABM (Asynchronous Balanced Mode)}: in cui interagiscono terminali
+combinati.
+\end{itemize}
+
+\subsubsection{Tipologie di frame HDLC}
+
+Esistono tre principali tipologie di frame:
+\begin{itemize}
+\item \emph{Information Frames}, oppure I-frames: trasportano dati dal livello
+di rete. In più possono anche includere informazioni sul controllo
+flusso dati e d'errore tramite piggybacking. 
+\item \emph{Supervisory Frames}, oppure S-frames: sono usati per il controllo
+del flusso dati e d'errore quando il piggybacking è impossibile o
+di scarsa efficienza. I frame S non hanno il campo Dati. 
+\item \emph{Unnumbered Frames}, oppure U-frames: sono utilizzati per diversi
+scopi, tra cui la gestione del collegamento. Questi frame non sempre
+hanno il campo Dati.
+\end{itemize}
+\begin{table}[b]
+\caption{Struttura di un frame HDLC}
+
+
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline 
+Flag & Indirizzo & Controllo & Dati & FCS & Flag\tabularnewline
+\hline 
+\hline 
+8 bit & 8 bit o più & 8 bit / 16 bit & Variabile (anche nulla) & 16 bit o 32 bit & 8 bit\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+\begin{table}[b]
+\caption{Campo Controllo dei frame HDLC}
+
+
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+\hline 
+ & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7\tabularnewline
+\hline 
+\hline 
+I-Frame & 0 & \multicolumn{3}{c|}{SN} & P/F & \multicolumn{3}{c|}{RN}\tabularnewline
+\hline 
+S-Frame & 1 & 0 & \multicolumn{2}{c|}{tipo} & P/F & \multicolumn{3}{c|}{RN}\tabularnewline
+\hline 
+U-Frame & 1 & 1 & \multicolumn{2}{c|}{tipo} & P/F & \multicolumn{3}{c|}{tipo}\tabularnewline
+\hline 
+\end{tabular}
+\end{table}
+
+
+
+\subsubsection{Il bit P/F}
+
+Poll / Final è un bit con due nomi. E' Poll quando un terminale primario
+richiede un'informazione da un terminale secondario mentre è Final
+quando il terminale secondario fornisce la risposta a quello primario
+oppure quanto la trasmissione termina.
+
+Il bit viene utilizzato come token tra tutti i terminali e può esisterne
+solo uno per volta. Il terminale secondario invia un Final solo quando
+riceve un Poll da un terminale primario; alla stessa maniera, un terminale
+primario reinvia un Poll solo quando riceve un Final da un terminale
+secondario oppure al termine di un timeout, indicando che il bit è
+stato perso.
+
+
+\subsubsection{I bit tipo}
+
+I due bit tipo si trovano nelle trame S ed in quelle U.
+
+
+\paragraph{S-Frame}
+\begin{description}
+\item [{Receiver~Not~Ready~(RNR)}] Conferma la ricezione dei pacchetti
+ricevuti sino a quel momento ($RN-1$) e richiede di interromperne
+ulteriori invii sino ad un'ulteriore comunicazione.
+\item [{Receiver~Ready~(RR)}] E' utilizzato idealmente come un ACK. Indica
+che il mittente è pronto per ricevere ulteriori dati, annulla l'effetto
+di un precedente pacchetto $RNR$ e conferma la ricezione dei pacchetti
+ricevuti sino a quel momento ($RN-1$).
+\item [{Reject~(REJ)}] Richiede l'immediata ritrasmissione dei pacchetti
+a partire da $SN$ e conferma la ricezione dei pacchetti ricevuti
+sino a quel momento ($RN-1$). Utilizzato quando non viene rispettato
+l'ordine dei pacchetti.
+\item [{Selective~Reject~(SREJ)}] E' utilizzato idealmente come un NACK.
+Richiede la singola ritrasmissione del pacchetto $SN$.
+\end{description}
+
+\subsection{Controllo di Flusso}
+\begin{description}
+\item [{Rate~massimo~di~trasmissione}] $R=min(C,\frac{W\cdot p}{2\tau+T})$;
+\item [{Durata~di~trasferimento~attivo~(passivo)}] $T_{ON}\,(T_{OFF})\,[s]$;
+\item [{Frequenza~media~di~trasmissione}] $A=\frac{p}{T_{ON}+T_{OFF}}$;
+\end{description}
+
+\subsubsection{Burstiness $B$}
+
+La ``burstiness'' è l'intermittenza di incremento e decremento di
+attività o frequenza di un dato evento; per calcolarla ci avvaliamo
+dei tempi di incremento $T_{ON}$ e decremento $T_{OFF}$.
+
+$B=\frac{T_{ON}}{T_{ON}+T_{OFF}}$; $(0\leq B\leq1)$
+\end{document}
