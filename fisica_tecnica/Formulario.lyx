@@ -2980,7 +2980,13 @@ R^{*}Tln(\frac{V_{2}}{V_{1}})\\
 \begin_inset Text
 
 \begin_layout Plain Layout
--
+\begin_inset Formula $\begin{cases}
+R^{*}ln(\frac{V_{2}}{V_{1}})\\
+-R^{*}ln(\frac{P_{2}}{P_{1}})
+\end{cases}$
+\end_inset
+
+
 \end_layout
 
 \end_inset
@@ -2989,13 +2995,7 @@ R^{*}Tln(\frac{V_{2}}{V_{1}})\\
 \begin_inset Text
 
 \begin_layout Plain Layout
-\begin_inset Formula $\begin{cases}
-R^{*}ln(\frac{V_{2}}{V_{1}})\\
--R^{*}ln(\frac{P_{2}}{P_{1}})
-\end{cases}$
-\end_inset
-
-
+-
 \end_layout
 
 \end_inset

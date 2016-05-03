@@ -1,6 +1,7 @@
-%% LyX 2.1.3 created this file.  For more info, see http://www.lyx.org/.
+%% LyX 2.1.4 created this file.  For more info, see http://www.lyx.org/.
 %% Do not edit unless you really know what you are doing.
 \RequirePackage{fix-cm}
+\RequirePackage{fixltx2e}
 \documentclass[twoside,twocolumn,italian]{article}
 \usepackage[T1]{fontenc}
 \usepackage[latin9]{inputenc}
@@ -9,10 +10,9 @@
 \usepackage{array}
 \usepackage{textcomp}
 \usepackage{multirow}
-\usepackage{amsthm}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{amssymb}
-\usepackage{fixltx2e}
 \usepackage{graphicx}
 
 \makeatletter
@@ -383,7 +383,7 @@ una isobara.
 
 Ciclo simmetrico costituito da due isoentropiche e due isocore.
 
-\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoPV.PNG}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoTS.PNG}
+\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoPV}\includegraphics[width=0.5\linewidth,height=0.25\paperheight,keepaspectratio]{Formulario/OttoTS}
 \begin{itemize}
 \item $\overleftarrow{Q}=u_{3}-u_{2}=c_{v}(T_{3}-T_{2})$;
 \item $\overrightarrow{Q}=u_{4}-u_{1}=c_{v}(T_{4}-T_{1})$;
@@ -665,7 +665,7 @@ Per superfici grigie formanti una cavità:
 \begin{table}[p]
 
 
-\protect\caption{Gas e calore specifico \label{tab:Specifiche-calore-specifico}}
+\caption{Gas e calore specifico \label{tab:Specifiche-calore-specifico}}
 
 
 \begin{tabular}{|c|c|c|}
@@ -684,7 +684,7 @@ Poliatomico Non Lineare & $\frac{6}{2}R^{*}$ & $\frac{8}{2}R^{*}$\tabularnewline
 
 
 \begin{table}[p]
-\protect\caption{Trasformazioni politropiche \label{tab:Trasformazioni-Politropiche}}
+\caption{Trasformazioni politropiche \label{tab:Trasformazioni-Politropiche}}
 
 
 \begin{tabular}{|c|c|c|c|c|c|c|}
@@ -700,10 +700,10 @@ R^{*}Tln(\frac{V_{2}}{V_{1}})\\
 \end{cases}$ & $\begin{cases}
 R^{*}Tln(\frac{V_{2}}{V_{1}})\\
 -R^{*}Tln(\frac{P_{2}}{P_{1}})
-\end{cases}$ & - & - & $\begin{cases}
+\end{cases}$ & - & $\begin{cases}
 R^{*}ln(\frac{V_{2}}{V_{1}})\\
 -R^{*}ln(\frac{P_{2}}{P_{1}})
-\end{cases}$\tabularnewline
+\end{cases}$ & -\tabularnewline
 \hline 
 Isobara $(P=cost)$ & $n=0$ & $P\Delta V$ & $c_{p}\Delta T$ & $c_{v}\Delta T$ & $c_{p}ln(\frac{T_{2}}{T_{1}})$ & $c_{p}\Delta T$\tabularnewline
 \hline 
@@ -721,7 +721,7 @@ c_{p}ln(\frac{T_{2}}{T_{1}})-R^{*}ln(\frac{P_{2}}{P_{1}})
 \begin{table}[p]
 
 
-\protect\caption{Conduzione - Coordinate cartesiane \label{tab:Conduzione---CoordinateCartesiane}}
+\caption{Conduzione - Coordinate cartesiane \label{tab:Conduzione---CoordinateCartesiane}}
 
 
 \begin{tabular}{|c|c|c|c|c|}
@@ -742,7 +742,7 @@ Lastra piana monostrato senza generazione di potenza & $\frac{\Delta T}{R_{TOT}\
 \begin{table}[p]
 
 
-\protect\caption{Conduzione - Coordinate cilindriche \label{tab:Conduzione---CoordinateCilindriche}}
+\caption{Conduzione - Coordinate cilindriche \label{tab:Conduzione---CoordinateCilindriche}}
 
 
 \begin{tabular}{|c|c|c|c|}
@@ -766,7 +766,7 @@ Cavo senza generazione di potenza & $k\frac{(T_{i}-T_{e})}{ln(\frac{R_{e}}{R_{i}
 \begin{table}[p]
 
 
-\protect\caption{Conduzione - Coordinate sferiche \label{tab:Conduzione---CoordinateSferiche}}
+\caption{Conduzione - Coordinate sferiche \label{tab:Conduzione---CoordinateSferiche}}
 
 
 \begin{tabular}{|c|c|c|}
@@ -783,7 +783,7 @@ Piena o cava & $\frac{r_{2}-r_{1}}{4\pi r_{1}r_{2}k}$ & $4\pi r^{2}$\tabularnewl
 \begin{table}[p]
 
 
-\protect\caption{Convezione - Costanti adimensionali \label{tab:Convezione---Costanti}}
+\caption{Convezione - Costanti adimensionali \label{tab:Convezione---Costanti}}
 
 
 Ove presenti, se $Re>Re_{CRIT}$, $Pr_{MIN}<Pr<Pr_{MAX}$, $Ra>Ra_{CRIT}$
@@ -818,7 +818,7 @@ e $5\cdot10^{5}\leq Re\leq10^{7}$ & $5\cdot10^{5}$ & / & / & /\tabularnewline
 \begin{table}[p]
 
 
-\protect\caption{Convezione - Condizioni di regime \label{tab:Convezione---Condizioni}}
+\caption{Convezione - Condizioni di regime \label{tab:Convezione---Condizioni}}
 
 
 \begin{tabular}{|c|c|c|}
@@ -836,7 +836,7 @@ Attorno ad un cilindro & $Re<2\cdot10^{5}$ & $Re>2\cdot10^{5}$\tabularnewline
 
 \end{table}
 \begin{table}[p]
-\protect\caption{Irragiamento - Calore\label{tab:Irragiamento}}
+\caption{Irragiamento - Calore\label{tab:Irragiamento}}
 
 
 \begin{tabular}{|c|c|c|c|}
